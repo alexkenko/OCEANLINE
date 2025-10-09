@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^3.1.0",
     "@sendgrid/mail": "^8.1.6",
     "@tabler/icons": "^3.35.0",
+    "nodemailer": "^7.0.9",
     "phosphor-react": "^1.4.1",
     "remixicon-react": "^1.0.0"
   }
