@@ -86,27 +86,147 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission (basic validation)
+// Form submission with real email sending
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         // Get form values
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
-        const message = contactForm.querySelector('textarea').value;
+        const nameInput = contactForm.querySelector('input[type="text"]');
+        const emailInput = contactForm.querySelector('input[type="email"]');
+        const subjectInput = contactForm.querySelectorAll('input[type="text"]')[1];
+        const messageInput = contactForm.querySelector('textarea');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const subject = subjectInput.value.trim();
+        const message = messageInput.value.trim();
         
         // Basic validation
-        if (name && email && subject && message) {
-            // Here you would typically send the form data to a server
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        } else {
-            alert('Please fill in all fields.');
+        if (!name || !email || !subject || !message) {
+            showNotification('Please fill in all fields.', 'error');
+            return;
+        }
+        
+        // Disable submit button and show loading state
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        submitButton.style.opacity = '0.7';
+        
+        try {
+            // Send form data to API
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    subject,
+                    message
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok) {
+                showNotification('Thank you for your message! We will get back to you soon.', 'success');
+                contactForm.reset();
+            } else {
+                showNotification(data.error || 'Failed to send message. Please try again or contact us directly.', 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showNotification('Failed to send message. Please try again or contact us directly at crew@oceanline.space', 'error');
+        } finally {
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+            submitButton.style.opacity = '1';
         }
     });
+}
+
+// Notification helper function
+function showNotification(message, type = 'info') {
+    // Remove any existing notifications
+    const existingNotification = document.querySelector('.form-notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `form-notification ${type}`;
+    notification.textContent = message;
+    
+    // Add styles
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        padding: 15px 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 10000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        max-width: 400px;
+        animation: slideInRight 0.3s ease-out;
+        ${type === 'success' ? 'background: #10b981; color: white;' : ''}
+        ${type === 'error' ? 'background: #ef4444; color: white;' : ''}
+        ${type === 'info' ? 'background: #3b82f6; color: white;' : ''}
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease-out';
+        setTimeout(() => notification.remove(), 300);
+    }, 5000);
+}
+
+// Add animation styles
+if (!document.querySelector('#notification-styles')) {
+    const style = document.createElement('style');
+    style.id = 'notification-styles';
+    style.textContent = `
+        @keyframes slideInRight {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .form-notification {
+                right: 10px;
+                left: 10px;
+                max-width: calc(100% - 20px);
+            }
+        }
+    `;
+    document.head.appendChild(style);
 }
 
 // Intersection Observer for fade-in animations
