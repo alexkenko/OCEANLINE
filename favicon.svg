@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4d5e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d7a8f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="50" fill="url(#bgGradient)"/>
+  <g fill="white">
+    <!-- Anchor symbol -->
+    <circle cx="50" cy="30" r="5"/>
+    <rect x="47" y="32" width="6" height="35" rx="1"/>
+    <path d="M35,60 Q50,75 65,60" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <line x1="35" y1="60" x2="35" y2="50" stroke="white" stroke-width="6" stroke-linecap="round"/>
+    <line x1="65" y1="60" x2="65" y2="50" stroke="white" stroke-width="6" stroke-linecap="round"/>
+    <line x1="40" y1="45" x2="60" y2="45" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
+

@@ -1,0 +1,51 @@
+// Icon components for the website
+import { 
+  RiAnchorLine, 
+  RiShipLine, 
+  RiSailboatLine, 
+  RiWavesLine,
+  RiShieldCheckLine,
+  RiScaleLine,
+  RiFlashLine,
+  RiBuildingLine,
+  RiGlobalLine,
+  RiTrophyLine,
+  RiStarLine,
+  RiTeamLine,
+  RiHeartLine,
+  RiLightbulbLine,
+  RiUserSearchLine,
+  RiFileListLine,
+  RiPassportLine,
+  RiTruckLine,
+  RiShip2Line,
+  RiOilLine,
+  RiShipLine as RiCruiseLine,
+  RiGraduationCapLine
+} from 'remixicon-react';
+
+// Export icon components for use in HTML
+window.RiIcons = {
+  RiAnchorLine,
+  RiShipLine,
+  RiSailboatLine,
+  RiWavesLine,
+  RiShieldCheckLine,
+  RiScaleLine,
+  RiFlashLine,
+  RiBuildingLine,
+  RiGlobalLine,
+  RiTrophyLine,
+  RiStarLine,
+  RiTeamLine,
+  RiHeartLine,
+  RiLightbulbLine,
+  RiUserSearchLine,
+  RiFileListLine,
+  RiPassportLine,
+  RiTruckLine,
+  RiShip2Line,
+  RiOilLine,
+  RiCruiseLine,
+  RiGraduationCapLine
+};
