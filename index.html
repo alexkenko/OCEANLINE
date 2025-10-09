@@ -109,166 +109,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&family=Noto+Sans+Georgian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Translation Data -->
-    <script>
-        const translations = {
-            en: {
-                // Navigation
-                'nav-home': 'Home',
-                'nav-about': 'About',
-                'nav-services': 'Services',
-                'nav-values': 'Our Values',
-                'nav-gallery': 'Gallery',
-                'nav-contact': 'Contact',
-                
-                // Hero Section
-                'hero-title': 'Leading Georgian Crewing Agency',
-                'hero-subtitle': 'Leading Georgian Crewing Agency | Professional Maritime Recruitment',
-                'hero-description': 'Connecting skilled Georgian seafarers with international shipping companies worldwide. Your trusted partner in maritime recruitment.',
-                'cta-primary': 'Get Started',
-                'cta-secondary': 'Learn More',
-                
-                // About Section
-                'about-title': 'About Ocean Line LLC',
-                'about-subtitle': 'Your Trusted Maritime Recruitment Partner',
-                'about-description': 'Ocean Line LLC is a premier maritime recruitment agency based in Batumi, Georgia. We specialize in providing highly experienced, STCW certified Georgian seafarers for Tankers, Bulk Carriers, Container Ships, and General Cargo vessels worldwide.',
-                'about-mission': 'Our Mission',
-                'about-mission-text': 'To bridge the gap between skilled Georgian maritime professionals and international shipping companies, ensuring safe, efficient, and compliant crew operations worldwide.',
-                'about-vision': 'Our Vision',
-                'about-vision-text': 'To be the leading maritime recruitment agency in Georgia, recognized globally for our professionalism, reliability, and commitment to excellence in crew management.',
-                
-                // Services Section
-                'services-title': 'Our Services',
-                'services-subtitle': 'Comprehensive Maritime Recruitment Solutions',
-                'service-crew-title': 'Professional Maritime Crew Recruitment',
-                'service-crew-desc': 'Our crewing agency provides comprehensive maritime recruitment services, personally selecting and screening all crew members. We verify experience, competence, fitness, and English proficiency. All seafarers hold valid certificates compliant with IMO and STCW regulations for international maritime operations.',
-                'service-cert-title': 'STCW Certification & Training',
-                'service-cert-desc': 'We ensure all our seafarers are fully certified according to STCW (Standards of Training, Certification and Watchkeeping) requirements. Our crew members undergo rigorous training programs and maintain up-to-date certifications for safe maritime operations.',
-                'service-support-title': '24/7 Crew Support',
-                'service-support-desc': 'Our dedicated support team provides round-the-clock assistance to both crew members and ship operators. From recruitment to deployment and ongoing support, we ensure smooth operations and crew satisfaction throughout their contracts.',
-                
-                // Vessel Types
-                'vessels-title': 'Vessel Types We Serve',
-                'vessel-tanker': 'Tankers',
-                'vessel-bulk': 'Bulk Carriers',
-                'vessel-container': 'Container Ships',
-                'vessel-general': 'General Cargo',
-                
-                // Contact Section
-                'contact-title': 'Get In Touch',
-                'contact-subtitle': 'Ready to find your next maritime opportunity?',
-                'contact-description': 'Contact us today to discuss your crewing needs or explore career opportunities in the maritime industry.',
-                'contact-name': 'Your Name',
-                'contact-email': 'Your Email',
-                'contact-message': 'Your Message',
-                'contact-send': 'Send Message',
-                'contact-info': 'Contact Information',
-                'contact-address': 'Batumi, Georgia',
-                'contact-phone': '+995 XXX XXX XXX',
-                'contact-email-address': 'info@oceanline.ge',
-                
-                // Footer
-                'footer-description': 'Leading Georgian crewing agency providing STCW certified seafarers for international shipping companies worldwide.',
-                'footer-quick-links': 'Quick Links',
-                'footer-services': 'Services',
-                'footer-legal': 'Legal',
-                'footer-follow': 'Follow Us',
-                'footer-copyright': '© 2024 Ocean Line LLC. All rights reserved.',
-                'footer-no-bribe': 'No Bribe Policy',
-                'footer-privacy': 'Privacy Policy',
-                'footer-terms': 'Terms of Service',
-                'footer-disclaimer': 'Disclaimer'
-            },
-            ka: {
-                // Navigation
-                'nav-home': 'მთავარი',
-                'nav-about': 'ჩვენ შესახებ',
-                'nav-services': 'სერვისები',
-                'nav-values': 'ღირებულებები',
-                'nav-gallery': 'გალერეა',
-                'nav-contact': 'კონტაქტი',
-                
-                // Hero Section
-                'hero-title': 'წამყვანი ქართული საკრუინგო სააგენტო',
-                'hero-subtitle': 'წამყვანი ქართული საკრუინგო სააგენტო | პროფესიონალური საზღვაო რეკრუტმენტი',
-                'hero-description': 'ჩვენ ვაკავშირებთ უნარიან ქართველ მეზღვაურებს საერთაშორისო საზღვაო კომპანიებთან მთელ მსოფლიოში. თქვენი სანდო პარტნიორი საზღვაო რეკრუტმენტში.',
-                'cta-primary': 'დაიწყეთ',
-                'cta-secondary': 'გაიგეთ მეტი',
-                
-                // About Section
-                'about-title': 'Ocean Line LLC-ს შესახებ',
-                'about-subtitle': 'თქვენი სანდო საზღვაო რეკრუტმენტის პარტნიორი',
-                'about-description': 'Ocean Line LLC არის პრემიერ საზღვაო რეკრუტმენტის სააგენტო ბათუმში, საქართველო. ჩვენ სპეციალიზდებით უმაღლესი გამოცდილების მქონე, STCW სერტიფიცირებული ქართველი მეზღვაურების მიწოდებაში ტანკერების, ნაყარი ტვირთის გადამზიდი ხომალდების, კონტეინერების ხომალდებისა და ზოგადი ტვირთის ხომალდებისთვის მთელ მსოფლიოში.',
-                'about-mission': 'ჩვენი მისია',
-                'about-mission-text': 'უნარიან ქართველ საზღვაო პროფესიონალებსა და საერთაშორისო საზღვაო კომპანიებს შორის ხიდის აშენება, უზრუნველყოფა უსაფრთხო, ეფექტური და შესაბამისი კრიუს ოპერაციები მთელ მსოფლიოში.',
-                'about-vision': 'ჩვენი ხედვა',
-                'about-vision-text': 'იყოთ წამყვანი საზღვაო რეკრუტმენტის სააგენტო საქართველოში, გლობალურად აღიარებული ჩვენი პროფესიონალიზმის, საიმედოობისა და საკრუინგო მართვის უმაღლესი ხარისხისადმი მოწოდებისთვის.',
-                
-                // Additional About Section
-                'about-excellence': 'პროფესიონალური ხარისხი',
-                'about-excellence-desc': 'ჩვენი კრიუს წევრები კარგად არიან მომზადებული, საიმედო და მზად არიან შეუერთდნენ თქვენს ფლოტს. ჩვენ სპეციალიზდებით ქართველი კრიუს რეკრუტმენტში და შერჩევაში, რომ ემსახურონ მეზღვაურებად უცხოურ დროშიან ხომალდებზე.',
-                'about-global': 'გლობალური გამოცდილება',
-                'about-global-desc': 'ჩვენ გვაქვს ყოვლისმომცველი ბაზა ყველა რანგის კვალიფიცირებული ქართველი მეზღვაურებისა. ყველა ჩვენი მეზღვაური სერტიფიცირებულია STCW კონვენციის სტანდარტების შესაბამისად.',
-                'about-commitment': 'ჩვენი მოწოდება ხარისხისადმი',
-                'about-commitment-desc': 'ჩვენ ვცდილობთ ვიმუშაოთ ჩვენს კლიენტებთან უმაღლესი პროფესიონალიზმით, ვუზრუნველვყოთ ყურადღებიანი მხარდაჭერა ჩვენს მეზღვაურებს და მუშაობთ დაუყოვნებლივ ნებისმიერი პრობლემის გადასაჭრელად.',
-                'about-ethics': 'OCEAN LINE LLC-ში პროფესიონალიზმი და ეთიკა პირველ ადგილზეა. შესანიშნავი კომუნიკაცია, ყურადღებიანი მომსახურება ჩვენს პარტნიორებს და ჩვენი ეთიკისა და ღირებულებების დაცვა - ეს ყველაფერი შეგიძლიათ მოელოთ, როცა აირჩევთ ჩვენ რეკრუტმენტის სერვისების მიმწოდებლად.',
-                
-                // Stats
-                'stat-stcw': 'STCW სერტიფიცირებული',
-                'stat-support': 'მხარდაჭერა',
-                'stat-network': 'ქსელი',
-                'stat-vessels': 'ხომალდების ტიპები',
-                
-                // Services Section
-                'services-title': 'ჩვენი სერვისები',
-                'services-subtitle': 'ყოვლისმომცველი საზღვაო რეკრუტმენტის გადაწყვეტები',
-                'service-crew-title': 'პროფესიონალური საზღვაო კრიუს რეკრუტმენტი',
-                'service-crew-desc': 'ჩვენი კრიუს აგენტობა უზრუნველყოფს ყოვლისმომცველ საზღვაო რეკრუტმენტის სერვისებს, პერსონალურად ირჩევს და ამოწმებს ყველა კრიუს წევრს. ჩვენ ვამოწმებთ გამოცდილებას, კომპეტენტურობას, ფიტნესსა და ინგლისურ ენის ცოდნას. ყველა მეზღვაური ფლობს მოქმედ სერტიფიკატებს IMO და STCW რეგულაციების შესაბამისად საერთაშორისო საზღვაო ოპერაციებისთვის.',
-                'service-cert-title': 'STCW სერტიფიკაცია და ტრენინგი',
-                'service-cert-desc': 'ჩვენ ვუზრუნველყოფთ, რომ ყველა ჩვენი მეზღვაური სრულად იყოს სერტიფიცირებული STCW (ტრენინგის, სერტიფიკაციისა და ვახტის მართვის სტანდარტების) მოთხოვნების შესაბამისად. ჩვენი კრიუს წევრები გადიან მკაცრ ტრენინგ პროგრამებს და ინარჩუნებენ განახლებულ სერტიფიკატებს უსაფრთხო საზღვაო ოპერაციებისთვის.',
-                'service-support-title': '24/7 კრიუს მხარდაჭერა',
-                'service-support-desc': 'ჩვენი მიძღვნილი მხარდაჭერის გუნდი უზრუნველყოფს მოგვიანებით დახმარებას როგორც კრიუს წევრებისთვის, ასევე ხომალდის ოპერატორებისთვის. რეკრუტმენტიდან განლაგებამდე და მუდმივი მხარდაჭერისთვის, ჩვენ ვუზრუნველყოფთ გლუვ ოპერაციებსა და კრიუს კმაყოფილებას მათი კონტრაქტების განმავლობაში.',
-                
-                // Vessel Types
-                'vessels-title': 'ხომალდების ტიპები რომლებსაც ვემსახურებით',
-                'vessels-intro': 'ჩვენ შეგვიძლია მივაწოდოთ საზღვაო სპეციალისტები შემდეგი ტიპის ხომალდებისთვის:',
-                'vessel-bulk-carriers': 'ნაყარი ტვირთის გადამზიდი ხომალდები',
-                'vessel-containers': 'კონტეინერების ხომალდები',
-                'vessel-tankers': 'ყველა ტიპის ტანკერები',
-                'vessel-passenger': 'მგზავრი ხომალდები',
-                'vessel-general': 'ზოგადი ტვირთი',
-                
-                // Contact Section
-                'contact-title': 'დაგვიკავშირდით',
-                'contact-subtitle': 'მზად ხართ იპოვოთ თქვენი შემდეგი საზღვაო შესაძლებლობა?',
-                'contact-description': 'დაგვიკავშირდით დღეს, რომ განვიხილოთ თქვენი კრიუს საჭიროებები ან გამოიკვლიოთ კარიერული შესაძლებლობები საზღვაო ინდუსტრიაში.',
-                'contact-name': 'თქვენი სახელი',
-                'contact-email': 'თქვენი ელ.ფოსტა',
-                'contact-message': 'თქვენი შეტყობინება',
-                'contact-send': 'შეტყობინების გაგზავნა',
-                'contact-info': 'საკონტაქტო ინფორმაცია',
-                'contact-address': 'ბათუმი, საქართველო',
-                'contact-phone': '+995 XXX XXX XXX',
-                'contact-email-address': 'info@oceanline.ge',
-                
-                // Footer
-                'footer-description': 'წამყვანი ქართული კრიუს აგენტობა, რომელიც უზრუნველყოფს STCW სერტიფიცირებულ მეზღვაურებს საერთაშორისო საზღვაო კომპანიებისთვის მთელ მსოფლიოში.',
-                'footer-quick-links': 'სწრაფი ბმულები',
-                'footer-services': 'სერვისები',
-                'footer-legal': 'იურიდიული',
-                'footer-follow': 'მიყევით ჩვენ',
-                'footer-copyright': '© 2024 Ocean Line LLC. ყველა უფლება დაცულია.',
-                'footer-no-bribe': 'ქრთამის აკრძალვის პოლიტიკა',
-                'footer-privacy': 'კონფიდენციალურობის პოლიტიკა',
-                'footer-terms': 'მომსახურების პირობები',
-                'footer-disclaimer': 'უარყოფა'
-            }
-        };
-    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -282,23 +126,17 @@
                     </a>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#home" data-translate="nav-home">Home</a></li>
-                    <li><a href="about.html" data-translate="nav-about">About Us</a></li>
-                    <li><a href="services.html" data-translate="nav-services">Services</a></li>
-                    <li><a href="values.html" data-translate="nav-values">Our Values</a></li>
-                    <li><a href="gallery.html" data-translate="nav-gallery">Gallery</a></li>
-                    <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="values.html">Our Values</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="header-actions">
-                    <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="en">EN</button>
-                        <button class="lang-btn" data-lang="ka">ქარ</button>
-                    </div>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -319,8 +157,8 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title" data-translate="hero-title">OCEAN LINE LLC</h1>
-                <p class="hero-subtitle" data-translate="hero-subtitle">Leading Georgian Crewing Agency | Professional Maritime Recruitment</p>
+                <h1 class="hero-title">OCEAN LINE LLC</h1>
+                <p class="hero-subtitle">Leading Georgian Crewing Agency | Professional Maritime Recruitment</p>
                 <div class="hero-values">
                     <div class="value-item">
                         <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
@@ -354,18 +192,18 @@
             <div class="about-intro">
                 <div class="intro-card">
                     <div class="intro-icon"><i class="ri-building-line"></i></div>
-                    <h3 data-translate="about-title">Leading Georgian Crewing Agency</h3>
-                    <p data-translate="about-description">Ocean Line LLC is a premier maritime recruitment agency based in Batumi, Georgia. We specialize in providing highly experienced, STCW certified Georgian seafarers for Tankers, Bulk Carriers, Container Ships, and General Cargo vessels worldwide.</p>
+                    <h3>Leading Georgian Crewing Agency</h3>
+                    <p>Ocean Line LLC is a premier maritime recruitment agency based in Batumi, Georgia. We specialize in providing highly experienced, STCW certified Georgian seafarers for Tankers, Bulk Carriers, Container Ships, and General Cargo vessels worldwide.</p>
                 </div>
                 <div class="intro-card">
                     <div class="intro-icon"><i class="ri-anchor-line"></i></div>
-                    <h3 data-translate="about-excellence">Professional Excellence</h3>
-                    <p data-translate="about-excellence-desc">Our crew members are well-trained, reliable and ready to join your fleet. We specialize in the recruitment and selection of Georgian crew to serve as mariners aboard foreign-flagged vessels.</p>
+                    <h3>Professional Excellence</h3>
+                    <p>Our crew members are well-trained, reliable and ready to join your fleet. We specialize in the recruitment and selection of Georgian crew to serve as mariners aboard foreign-flagged vessels.</p>
                 </div>
                 <div class="intro-card">
                     <div class="intro-icon"><i class="ri-waves-line"></i></div>
-                    <h3 data-translate="about-global">Global Experience</h3>
-                    <p data-translate="about-global-desc">We have an extensive database of qualified Georgian mariners of all ranks. All our seafarers are certified in accordance with the STCW convention standards.</p>
+                    <h3>Global Experience</h3>
+                    <p>We have an extensive database of qualified Georgian mariners of all ranks. All our seafarers are certified in accordance with the STCW convention standards.</p>
                 </div>
             </div>
 
@@ -373,28 +211,28 @@
             <div class="about-details">
                 <div class="about-main-content">
                     <div class="content-card">
-                        <h3 data-translate="about-commitment">Our Commitment to Excellence</h3>
-                        <p data-translate="about-commitment-desc">We strive to conduct business with our clients with the utmost professionalism, provide attentive support to our mariners, and will work immediately to resolve any issues that may arise.</p>
-                        <p data-translate="about-ethics">At OCEAN LINE LLC, professionalism and ethics come first. Excellent communication, attentive service to our partners, and an adherence to our ethics and values are all things you can expect when you choose us as your recruiting services provider.</p>
+                        <h3>Our Commitment to Excellence</h3>
+                        <p>We strive to conduct business with our clients with the utmost professionalism, provide attentive support to our mariners, and will work immediately to resolve any issues that may arise.</p>
+                        <p>At OCEAN LINE LLC, professionalism and ethics come first. Excellent communication, attentive service to our partners, and an adherence to our ethics and values are all things you can expect when you choose us as your recruiting services provider.</p>
                     </div>
                 </div>
 
                 <div class="about-stats">
                     <div class="stat-item">
                         <div class="stat-number">100%</div>
-                        <div class="stat-label" data-translate="stat-stcw">STCW Certified</div>
+                        <div class="stat-label">STCW Certified</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">24/7</div>
-                        <div class="stat-label" data-translate="stat-support">Support</div>
+                        <div class="stat-label">Support</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">Global</div>
-                        <div class="stat-label" data-translate="stat-network">Network</div>
+                        <div class="stat-label">Network</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">All</div>
-                        <div class="stat-label" data-translate="stat-vessels">Vessel Types</div>
+                        <div class="stat-label">Vessel Types</div>
                     </div>
                 </div>
             </div>
@@ -439,7 +277,7 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title" data-translate="services-title">Our Services</h2>
+            <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -448,8 +286,8 @@
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                     </div>
-                    <h3 data-translate="service-crew-title">Professional Maritime Crew Recruitment</h3>
-                    <p data-translate="service-crew-desc">Our crewing agency provides comprehensive maritime recruitment services, personally selecting and screening all crew members. We verify experience, competence, fitness, and English proficiency. All seafarers hold valid certificates compliant with IMO and STCW regulations for international maritime operations.</p>
+                    <h3>Professional Maritime Crew Recruitment</h3>
+                    <p>Our crewing agency provides comprehensive maritime recruitment services, personally selecting and screening all crew members. We verify experience, competence, fitness, and English proficiency. All seafarers hold valid certificates compliant with IMO and STCW regulations for international maritime operations.</p>
                     <a href="services.html#recruitment" class="service-link">Learn More →</a>
                 </div>
                 
@@ -483,23 +321,23 @@
 
             <!-- Vessel Types -->
             <div class="vessel-types">
-                <h3 data-translate="vessels-intro">We can provide marine specialists for the following types of vessel:</h3>
+                <h3>We can provide marine specialists for the following types of vessel:</h3>
                 <div class="vessel-list">
                     <div class="vessel-item">
                         <i class="ri-truck-line"></i>
-                        <span data-translate="vessel-bulk-carriers">BULK CARRIERS</span>
+                        <span>BULK CARRIERS</span>
                     </div>
                     <div class="vessel-item">
                         <i class="ri-ship-2-line"></i>
-                        <span data-translate="vessel-containers">CONTAINERS</span>
+                        <span>CONTAINERS</span>
                     </div>
                     <div class="vessel-item">
                         <i class="ri-oil-line"></i>
-                        <span data-translate="vessel-tankers">ALL TYPES OF TANKERS</span>
+                        <span>ALL TYPES OF TANKERS</span>
                     </div>
                     <div class="vessel-item">
                         <i class="ri-ship-line"></i>
-                        <span data-translate="vessel-passenger">PASSENGER VESSELS</span>
+                        <span>PASSENGER VESSELS</span>
                     </div>
                     <div class="vessel-item">
                         <i class="ri-ship-line"></i>
@@ -558,7 +396,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" data-translate="contact-title">Contact Information</h2>
+            <h2 class="section-title">Contact Information</h2>
             <div class="contact-content">
                 <div class="contact-info">
                 <div class="contact-item">
