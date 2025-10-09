@@ -87,6 +87,21 @@ body {
     font-size: 1.2rem;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.logo-link:hover {
+    color: var(--text-light);
+    text-decoration: none;
+    transform: scale(1.02);
+}
+
 .logo-img {
     height: 50px;
     width: auto;
