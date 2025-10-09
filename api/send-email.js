@@ -1,7 +1,9 @@
 // Simple email forwarding using mailto or form-to-email service
 // This handles the contact form submission and formats it for email delivery
 
-export default async function handler(req, res) {
+const nodemailer = require('nodemailer');
+
+module.exports = async function handler(req, res) {
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -34,8 +36,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid email format' });
     }
 
-    // Use nodemailer with SMTP
-    const nodemailer = require('nodemailer');
+    // Use nodemailer with SMTP (already required at top)
 
     // Create transporter - using your oceanline.space email
     const transporter = nodemailer.createTransport({
