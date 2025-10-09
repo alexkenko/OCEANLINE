@@ -52,163 +52,52 @@
     <section class="gallery-section">
         <div class="container">
             <div class="gallery-intro">
-                <h2>Maritime Excellence Captured</h2>
-                <p>Explore our collection of vessels, crew operations, and maritime adventures. From bulk carriers to container ships, see the professionalism and dedication that defines Ocean Line LLC.</p>
+                <h2>Maritime Operations in Action</h2>
+                <p>Watch our professional crew and vessel operations. Experience the dedication and expertise that defines Ocean Line LLC.</p>
             </div>
 
-            <!-- Gallery Filters -->
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="vessels">Vessels</button>
-                <button class="filter-btn" data-filter="crew">Crew Operations</button>
-                <button class="filter-btn" data-filter="ports">Ports & Operations</button>
-                <button class="filter-btn" data-filter="events">Events</button>
-            </div>
 
-            <!-- Gallery Grid -->
-            <div class="gallery-grid">
-                <!-- Placeholder images - you can replace these with your actual ship photos -->
-                <div class="gallery-item" data-category="vessels">
-                    <div class="gallery-placeholder">
-                        <i class="ri-ship-line"></i>
-                        <p>Bulk Carrier</p>
+            <!-- Video Section -->
+            <div class="video-section">
+                <h3>Maritime Videos</h3>
+                <div class="video-grid">
+                    <div class="video-item" data-category="videos">
+                        <div class="video-container">
+                            <video controls preload="metadata" poster="" width="100%" height="250">
+                                <source src="m.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <div class="video-play-btn">
+                                    <i class="ri-play-circle-line"></i>
+                                </div>
+                                <h4>Maritime Operations</h4>
+                                <p>Professional crew operations and vessel management</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-overlay">
-                        <h3>Bulk Carrier</h3>
-                        <p>Our reliable bulk carrier in action</p>
-                        <button class="gallery-btn" onclick="openLightbox('vessel1')">
-                            <i class="ri-eye-line"></i> View
-                        </button>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="vessels">
-                    <div class="gallery-placeholder">
-                        <i class="ri-ship-2-line"></i>
-                        <p>Container Ship</p>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Container Ship</h3>
-                        <p>Modern container vessel operations</p>
-                        <button class="gallery-btn" onclick="openLightbox('vessel2')">
-                            <i class="ri-eye-line"></i> View
-                        </button>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="vessels">
-                    <div class="gallery-placeholder">
-                        <i class="ri-oil-line"></i>
-                        <p>Tanker</p>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Oil Tanker</h3>
-                        <p>Specialized tanker operations</p>
-                        <button class="gallery-btn" onclick="openLightbox('vessel3')">
-                            <i class="ri-eye-line"></i> View
-                        </button>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="crew">
-                    <div class="gallery-placeholder">
-                        <i class="ri-team-line"></i>
-                        <p>Crew Training</p>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Professional Crew</h3>
-                        <p>Our skilled Georgian seafarers</p>
-                        <button class="gallery-btn" onclick="openLightbox('crew1')">
-                            <i class="ri-eye-line"></i> View
-                        </button>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="ports">
-                    <div class="gallery-placeholder">
-                        <i class="ri-anchor-line"></i>
-                        <p>Port Operations</p>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Port Operations</h3>
-                        <p>Efficient port handling</p>
-                        <button class="gallery-btn" onclick="openLightbox('port1')">
-                            <i class="ri-eye-line"></i> View
-                        </button>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="crew">
-                    <div class="gallery-placeholder">
-                        <i class="ri-graduation-cap-line"></i>
-                        <p>Certification</p>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>STCW Certification</h3>
-                        <p>Professional certification process</p>
-                        <button class="gallery-btn" onclick="openLightbox('cert1')">
-                            <i class="ri-eye-line"></i> View
-                        </button>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-placeholder">
-                        <i class="ri-calendar-event-line"></i>
-                        <p>Maritime Events</p>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Industry Events</h3>
-                        <p>Participation in maritime conferences</p>
-                        <button class="gallery-btn" onclick="openLightbox('event1')">
-                            <i class="ri-eye-line"></i> View
-                        </button>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="ports">
-                    <div class="gallery-placeholder">
-                        <i class="ri-building-line"></i>
-                        <p>Batumi Port</p>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Batumi Port</h3>
-                        <p>Our home port operations</p>
-                        <button class="gallery-btn" onclick="openLightbox('port2')">
-                            <i class="ri-eye-line"></i> View
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Upload Area -->
-                <div class="gallery-item upload-area" id="uploadArea">
-                    <div class="upload-content">
-                        <i class="ri-upload-cloud-line"></i>
-                        <h3>Upload New Photos</h3>
-                        <p>Share your maritime photos with us</p>
-                        <input type="file" id="photoUpload" multiple accept="image/*" style="display: none;">
-                        <button class="upload-btn" onclick="document.getElementById('photoUpload').click()">
-                            <i class="ri-camera-line"></i> Choose Photos
-                        </button>
+                    
+                    <div class="video-item" data-category="videos">
+                        <div class="video-container">
+                            <video controls preload="metadata" poster="" width="100%" height="250">
+                                <source src="WhatsApp Video 2025-10-09 at 17.25.37_fe8e0bf4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <div class="video-play-btn">
+                                    <i class="ri-play-circle-line"></i>
+                                </div>
+                                <h4>Ocean Line Operations</h4>
+                                <p>Behind the scenes of our maritime services</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-            <div class="lightbox-image-container">
-                <img id="lightboxImage" src="" alt="">
-            </div>
-            <div class="lightbox-info">
-                <h3 id="lightboxTitle"></h3>
-                <p id="lightboxDescription"></p>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -226,7 +115,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="gallery.js"></script>
 </body>
 </html>
 
