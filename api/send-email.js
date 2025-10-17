@@ -31,29 +31,48 @@ module.exports = async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid email format' });
     }
 
-    // For now, just log the form submission and return success
-    // This prevents the 500 error while we debug the SMTP issue
-    console.log('Form submission received:', {
+    // Use Formspree to send email
+    const formspreeEndpoint = process.env.FORMSPREE_ENDPOINT || 'https://formspree.io/f/xvqgpqyy';
+    
+    const formData = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message,
+      _replyto: email,
+      _subject: `Ocean Line Contact Form: ${subject}`
+    };
+
+    // Send to Formspree
+    const formspreeResponse = await fetch(formspreeEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (!formspreeResponse.ok) {
+      throw new Error(`Formspree error: ${formspreeResponse.status}`);
+    }
+
+    console.log('Email sent via Formspree:', {
       name,
       email,
       subject,
-      message,
       timestamp: new Date().toISOString()
     });
 
-    // TODO: Implement actual email sending once SMTP is working
-    // For now, return success so the form works
     return res.status(200).json({ 
       success: true, 
-      message: 'Message received successfully. We will contact you soon.',
-      note: 'Email functionality is being configured. Your message has been logged.'
+      message: 'Thank you for your message! We will get back to you soon.'
     });
 
   } catch (error) {
-    console.error('Error processing form:', error);
+    console.error('Error sending email:', error);
     
     return res.status(500).json({ 
-      error: 'Failed to process message. Please try again or contact us directly.',
+      error: 'Failed to send message. Please try again or contact us directly.',
       debug: process.env.NODE_ENV === 'development' ? error.message : undefined
     });
   }
