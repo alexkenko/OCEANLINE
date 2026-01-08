@@ -2906,6 +2906,30 @@ section {
         transform: translateX(5px);
     }
 
+    /* Mobile Footer Layout */
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        text-align: left;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-section h3 {
+        margin-top: 0;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
     /* Mobile Hero Section */
     .hero {
         min-height: 100vh;
