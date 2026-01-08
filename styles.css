@@ -196,6 +196,11 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     justify-content: center;
     width: 100%;
+    pointer-events: auto;
+}
+
+.nav-menu li:has(.lang-switch) {
+    pointer-events: auto;
 }
 
 .header-actions {
@@ -218,13 +223,16 @@ body {
     border: none;
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
-    padding: 4px 8px;
+    padding: 8px 12px;
     border-radius: 4px;
     font-family: inherit;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: var(--transition);
+    pointer-events: auto;
+    z-index: 1;
+    position: relative;
 }
 
 .lang-btn.active {
@@ -234,7 +242,8 @@ body {
 
 .lang-btn:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
 }
 
 .hamburger {

@@ -1732,15 +1732,21 @@ function setLanguage(lang) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Attach click handlers
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const lang = btn.dataset.lang;
+// Use event delegation for language buttons (works even if buttons are added dynamically)
+document.addEventListener('click', (e) => {
+    // Check if clicked element is a language button or inside one
+    const langBtn = e.target.closest('.lang-btn');
+    if (langBtn && langBtn.dataset.lang) {
+        e.preventDefault();
+        e.stopPropagation();
+        const lang = langBtn.dataset.lang;
+        if (lang && translations[lang]) {
             setLanguage(lang);
-        });
-    });
+        }
+    }
+});
 
+document.addEventListener('DOMContentLoaded', () => {
     // Initialize language from storage or default EN
     let initialLang = 'en';
     try {
@@ -1753,6 +1759,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setLanguage(initialLang);
 });
+
 
 
 
