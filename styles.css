@@ -119,6 +119,44 @@ body {
     gap: 2rem;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.lang-btn.active {
+    color: var(--gold);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.lang-btn:hover {
+    color: #ffffff;
+}
+
 .nav-menu a {
     color: var(--text-light);
     text-decoration: none;
