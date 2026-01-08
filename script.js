@@ -325,18 +325,46 @@ const translations = {
             page: {
                 title: 'About Us',
                 subtitle: 'Your Trusted Maritime Partner'
+            },
+            overview: {
+                heading: 'Leading Georgian Maritime Excellence',
+                lead:
+                    'Ocean Line LLC is a newly established, fully certified crewing agency based in the strategic port city of Batumi, Georgia. We specialize in providing highly experienced Georgian seafarers for international maritime operations.',
+                p1:
+                    'Our agency represents the pinnacle of Georgian maritime talent, offering skilled crew members for Tankers, Bulk Carriers, Container Ships, and General Cargo vessels. Every member of our crew is well-trained, reliable, and ready to join your fleet with the highest standards of professionalism.',
+                p2:
+                    'We have built an extensive database of qualified Georgian mariners of all ranks, all certified in accordance with the STCW convention standards. Our seafarers bring a wealth of experience gained at sea on various vessel types and under multiple international flags.'
+            },
+            story: {
+                heading: 'Our Story',
+                p1:
+                    "Founded in the heart of Georgia's maritime capital, Ocean Line LLC emerged from a vision to bridge Georgian maritime expertise with global opportunities. Our founders, with decades of combined experience in the shipping industry, recognized the untapped potential of Georgian seafarers and their exceptional skills."
             }
         },
         services: {
             page: {
                 title: 'Our Services',
                 subtitle: 'Comprehensive Maritime Crew Solutions'
+            },
+            recruitment: {
+                heading: 'Recruitment and Selection of Qualified Crew',
+                tagline: 'Building Your Perfect Maritime Team',
+                intro:
+                    'At Ocean Line LLC, we understand that the success of any maritime operation depends on having the right crew. Our comprehensive recruitment service ensures that every seafarer we recommend meets the highest standards of competence, experience, and professionalism.',
+                processTitle: 'Our Recruitment Process'
             }
         },
         values: {
             page: {
                 title: 'Our Values',
                 subtitle: 'The Principles That Guide Our Every Action'
+            },
+            intro: {
+                heading: 'Our Foundation',
+                p1:
+                    'At Ocean Line LLC, our values are not just words on a page—they are the principles that guide every decision we make, every relationship we build, and every service we provide. These five core values define who we are as a company and shape the maritime recruitment excellence we deliver to our clients and crew members worldwide.',
+                p2:
+                    'Our values are highly important to our daily work and drive what we do. Every decision and face-to-face meeting with our partners around the world should reflect our corporate values.'
             }
         },
         gallery: {
@@ -423,18 +451,46 @@ const translations = {
             page: {
                 title: 'ჩვენს შესახებ',
                 subtitle: 'თქვენი საიმედო საზღვაო პარტნიორი'
+            },
+            overview: {
+                heading: 'ქართული საზღვაო გამოცდილების ლიდერი',
+                lead:
+                    'Ocean Line LLC არის ახლად დაფუძნებული, სრულად სერტიფიცირებული საქრუინგო სააგენტო ბათუმში, საქართველოს სტრატეგიულ პორტ ქალაქში. ჩვენ სპეციალიზირებულები ვართ საერთაშორისო გადაზიდვებისთვის მაღალი გამოცდილების მქონე ქართველ მეზღვაურებში.',
+                p1:
+                    'ჩვენი სააგენტო წარმოადგენს ქართული საზღვაო რესურსის საუკეთესო მხარეს – ვთავაზობთ კვალიფიციურ ეკიპაჟს ტანკერებისთვის, ბულკერისა და კონტეინერის ტიპის გემებისთვის, ასევე ზოგადი ტვირთის გემებისთვის. ეკიპაჟის თითოეული წევრი მომზადებულია, საიმედოა და მზადაა თქვენი ფლოტის უმაღლესი პროფესიონალიზმით მომსახურებისთვის.',
+                p2:
+                    'ჩვენ შევქმენით კვალიფიციური ქართველი მეზღვაურების ვრცელი ბაზა ყველა რანგისათვის. ჩვენი მეზღვაურები ფლობენ STCW კონვენციასთან შესაბამის სერტიფიკატებს და აქვთ მრავალწლიანი გამოცდილება სხვადასხვა ტიპის გემებზე, სხვადასხვა საერთაშორისო დროშის ქვეშ.'
+            },
+            story: {
+                heading: 'ჩვენი ისტორია',
+                p1:
+                    'Ocean Line LLC დაფუძნდა საქართველოს საზღვაო დედაქალაქში ხედვით – ქართული საზღვაო გამოცდილების დაკავშირება გლობალურ შესაძლებლობებთან. ათწლეულების გამოცდილების მქონე დამფუძნებლებმა დაინახეს ქართველი მეზღვაურების დიდი პოტენციალი და უნიკალური უნარები.'
             }
         },
         services: {
             page: {
                 title: 'ჩვენი სერვისები',
                 subtitle: 'გაერთიანებული საზღვაო ეკიპაჟის გადაწყვეტილებები'
+            },
+            recruitment: {
+                heading: 'კვალიფიციური ეკიპაჟის შერჩევა და რეკრუტინგი',
+                tagline: 'იდეალური საზღვაო გუნდის შექმნა თქვენი ფლოტისთვის',
+                intro:
+                    'Ocean Line LLC‑ში გვესმის, რომ ნებისმიერი საზღვაო ოპერაციის წარმატება სწორ ეკიპაჟზეა დამოკიდებული. ჩვენი ყოვლისმომცველი რეკრუტინგის სერვისი უზრუნველყოფს, რომ თითოეული საზღვაო სპეციალისტი, რომელსაც გირჩევთ, აკმაყოფილებდეს კომპეტენციის, გამოცდილებისა და პროფესიონალიზმის უმაღლეს სტანდარტებს.',
+                processTitle: 'ჩვენი შერჩევის პროცესი'
             }
         },
         values: {
             page: {
                 title: 'ჩვენი ფასეულობები',
                 subtitle: 'პრინციპები, რომლებიც ჩვენს ყველა ნაბიჯს მართავს'
+            },
+            intro: {
+                heading: 'ჩვენი საფუძველი',
+                p1:
+                    'Ocean Line LLC‑ში ჩვენი ფასეულობები მხოლოდ სიტყვები არაა – ისინი პრინციპებია, რომლებიც განსაზღვრავს თითოეულ გადაწყვეტილებას, ურთიერთობას და მომსახურებას. ეს ხუთი ძირითადი ღირებულება ქმნის ჩვენი კომპანიის იდენტობას და უზრუნველყოფს მაღალ სტანდარტებს საზღვაო რეკრუტინგში.',
+                p2:
+                    'ეს ფასეულობები უმნიშვნელოვანესია ჩვენი ყოველდღიური საქმიანობისთვის. ყოველი შეხვედრა და კომუნიკაცია ჩვენს პარტნიორებთან მთელ მსოფლიოში უნდა ასახავდეს ამ კორპორატიულ პრინციპებს.'
             }
         },
         gallery: {
