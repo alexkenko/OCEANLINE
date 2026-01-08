@@ -134,6 +134,10 @@ body {
     font-weight: 500;
 }
 
+.mobile-lang-switch {
+    display: none;
+}
+
 .lang-btn {
     background: transparent;
     border: none;
@@ -181,7 +185,7 @@ body {
 }
 
 .hamburger {
-    display: flex;
+    display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 5px;
@@ -2892,6 +2896,21 @@ section {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .mobile-lang-switch {
+        display: block;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+    }
+
+    .mobile-lang-switch .lang-switch {
+        justify-content: center;
+    }
+
+    .header-actions .lang-switch {
+        display: none;
     }
 
     .nav-menu a {
