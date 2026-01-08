@@ -134,8 +134,10 @@ body {
     font-weight: 500;
 }
 
-.mobile-lang-switch {
-    display: none;
+.nav-lang-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
 }
 
 .lang-btn {
@@ -2898,19 +2900,16 @@ section {
         left: 0;
     }
 
-    .mobile-lang-switch {
+    .nav-lang-switch {
         display: block;
         padding-top: 1rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
+        margin-left: 0;
     }
 
-    .mobile-lang-switch .lang-switch {
+    .nav-lang-switch .lang-switch {
         justify-content: center;
-    }
-
-    .header-actions .lang-switch {
-        display: none;
     }
 
     .nav-menu a {

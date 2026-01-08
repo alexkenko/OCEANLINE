@@ -536,26 +536,31 @@ const translations = {
                 processTitle: 'Our Recruitment Process',
                 features: {
                     f1: {
+                        title: 'Rigorous Screening',
+                        text:
+                            'Every applicant undergoes thorough background checks, credential verification, and competency assessments to ensure they meet international maritime standards.'
+                    },
+                    f2: {
                         title: 'Qualification Verification',
                         text:
                             'We verify all certificates, licenses, and endorsements to ensure compliance with STCW convention standards and IMO regulations.'
                     },
-                    f2: {
+                    f3: {
                         title: 'Fitness Assessment',
                         text:
                             'All crew members undergo medical examinations and fitness evaluations to ensure they are physically and mentally prepared for maritime duties.'
                     },
-                    f3: {
+                    f4: {
                         title: 'English Proficiency',
                         text:
                             'We assess English language comprehension to ensure effective communication aboard international vessels, promoting safety and efficiency.'
                     },
-                    f4: {
+                    f5: {
                         title: 'Experience Verification',
                         text:
                             'We review sea service records and previous employment history to match the right experience level with your vessel requirements.'
                     },
-                    f5: {
+                    f6: {
                         title: 'Pre-Joining Preparation',
                         text:
                             'Selected crew members receive comprehensive briefings about vessel specifications, company policies, and voyage requirements before joining.'
@@ -726,20 +731,168 @@ const translations = {
             page: {
                 title: 'Gallery',
                 subtitle: 'Our Fleet in Action'
+            },
+            intro: {
+                title: 'Maritime Operations in Action',
+                text: 'Watch our professional crew and vessel operations. Experience the dedication and expertise that defines Ocean Line LLC.'
+            },
+            videos: {
+                title: 'Maritime Videos',
+                v1: {
+                    title: 'Maritime Operations',
+                    text: 'Professional crew operations and vessel management'
+                },
+                v2: {
+                    title: 'Ocean Line Operations',
+                    text: 'Behind the scenes of our maritime services'
+                }
             }
         },
         legal: {
             disclaimer: {
                 title: 'Disclaimer',
-                subtitle: 'Important Information About Our Services'
+                subtitle: 'Important Information About Our Services',
+                secTitle: 'Maritime Crewing Services Disclaimer',
+                secIntro:
+                    'Ocean Line LLC provides maritime crewing services as a recruitment agency. Please read the following disclaimer carefully before engaging our services.',
+                sec1Title: '1. Service Scope',
+                sec1Text:
+                    'Ocean Line LLC acts as an intermediary between ship owners/operators and qualified seafarers. We facilitate the recruitment, placement, and management of maritime personnel but do not directly employ seafarers or operate vessels.',
+                sec2Title: '2. Certification and Compliance',
+                sec2Text:
+                    'While we ensure all recommended crew members hold valid STCW certifications and meet industry standards, ultimate responsibility for vessel compliance, safety, and operations rests with the ship owner/operator and the master of the vessel.',
+                sec3Title: '3. Liability Limitations',
+                sec3Text: "Ocean Line LLC's liability is limited to the scope of our recruitment services. We are not liable for:",
+                sec3L1: 'Actions or conduct of placed crew members while on board',
+                sec3L2: 'Vessel operations, safety, or performance',
+                sec3L3: 'Changes in international maritime regulations',
+                sec3L4: 'Delays in visa processing or travel arrangements',
+                sec3L5: 'Medical conditions that develop after placement',
+                sec3L6: 'Political or economic factors affecting shipping',
+                sec4Title: '4. Visa and Travel',
+                sec4Text:
+                    'We provide assistance with visa applications and travel arrangements but cannot guarantee approval. Visa decisions remain with relevant government authorities. Travel restrictions and requirements may change without notice.',
+                sec5Title: '5. Employment Terms',
+                sec5Text:
+                    'Employment terms, including salary, working conditions, and contract duration, are negotiated directly between the seafarer and the ship owner/operator. Ocean Line LLC facilitates but does not guarantee specific employment conditions.',
+                sec6Title: '6. Regulatory Compliance',
+                sec6Text:
+                    'Maritime regulations vary by jurisdiction and vessel type. While we maintain awareness of major international standards, clients must ensure compliance with all applicable laws in their areas of operation.',
+                sec7Title: '7. Information Accuracy',
+                sec7Text:
+                    'We strive to provide accurate information about crew qualifications and availability. However, information may change, and we recommend verification of all details before final placement decisions.',
+                sec8Title: '8. Force Majeure',
+                sec8Text:
+                    'Ocean Line LLC is not liable for delays or failures caused by circumstances beyond our reasonable control, including but not limited to natural disasters, pandemics, political unrest, or government actions.',
+                sec9Title: '9. Professional Advice',
+                sec9Text:
+                    'This website and our services provide general information. For specific legal, financial, or technical advice regarding maritime operations, consult qualified professionals in those fields.',
+                sec10Title: '10. Contact Information',
+                sec10Text: 'For questions about this disclaimer or our services:',
+                lastUpdated: 'Last updated: January 2025'
             },
             terms: {
                 title: 'Terms of Service',
-                subtitle: 'Terms and Conditions'
+                subtitle: 'Terms and Conditions',
+                secTitle: 'Terms and Conditions for Maritime Crewing Services',
+                secIntro:
+                    "These terms and conditions govern the use of Ocean Line LLC's maritime crewing services. By engaging our services, you agree to be bound by these terms.",
+                sec1Title: '1. Service Agreement',
+                sec1Text:
+                    'Ocean Line LLC provides maritime crewing services including but not limited to crew recruitment, placement, management, and visa assistance. Services are provided subject to these terms and any specific agreements entered into with clients.',
+                sec2Title: '2. Client Obligations',
+                sec2Text: 'Clients agree to:',
+                sec2L1: 'Provide accurate information about vessel requirements and operating conditions',
+                sec2L2: 'Comply with all applicable maritime laws and regulations',
+                sec2L3: 'Maintain proper insurance coverage for crew members',
+                sec2L4: 'Provide safe working conditions and adequate provisions',
+                sec2L5: 'Honor employment contracts and payment obligations',
+                sec2L6: 'Notify us promptly of any issues or changes in requirements',
+                sec3Title: '3. Seafarer Obligations',
+                sec3Text: 'Seafarers agree to:',
+                sec3L1: 'Maintain valid certifications and medical fitness',
+                sec3L2: 'Perform duties competently and professionally',
+                sec3L3: 'Comply with vessel rules and international maritime law',
+                sec3L4: 'Report for duty as scheduled',
+                sec3L5: 'Provide accurate information about qualifications and experience',
+                sec3L6: 'Follow safety procedures and emergency protocols',
+                sec4Title: '4. Fees and Payments',
+                sec4Text: 'Service fees are as agreed in individual contracts. Payment terms typically include:',
+                sec4L1: 'Recruitment fees payable upon successful placement',
+                sec4L2: 'Management fees for ongoing crew support',
+                sec4L3: 'Additional charges for visa processing and travel arrangements',
+                sec4L4: 'Late payment fees may apply for overdue accounts',
+                sec5Title: '5. Cancellation and Refunds',
+                sec5Text: 'Cancellation policies vary by service type. Generally:',
+                sec5L1: 'Recruitment fees are non-refundable once placement is confirmed',
+                sec5L2: 'Visa processing fees may be partially refundable if processing hasn’t begun',
+                sec5L3: 'Management fees are prorated based on service duration',
+                sec6Title: '6. Confidentiality',
+                sec6Text:
+                    'Both parties agree to maintain confidentiality of sensitive information including vessel details, crew personal information, and business operations.',
+                sec7Title: '7. Compliance and Regulations',
+                sec7Text: 'All parties must comply with:',
+                sec7L1: 'International Maritime Organization (IMO) regulations',
+                sec7L2: 'Maritime Labour Convention (MLC) 2006',
+                sec7L3: 'STCW Convention requirements',
+                sec7L4: 'Local and international immigration laws',
+                sec7L5: 'Anti-discrimination and equal opportunity laws',
+                sec8Title: '8. Dispute Resolution',
+                sec8Text: 'Disputes will be resolved through:',
+                sec8L1: 'Direct negotiation between parties',
+                sec8L2: 'Mediation if negotiation fails',
+                sec8L3: 'Arbitration under Georgian law if mediation fails',
+                sec8L4: 'Legal action as a last resort',
+                sec9Title: '9. Force Majeure',
+                sec9Text:
+                    'Neither party is liable for delays or failures due to circumstances beyond reasonable control, including natural disasters, pandemics, government actions, or labor disputes.',
+                sec10Title: '10. Modifications',
+                sec10Text:
+                    'These terms may be modified at any time. Continued use of services constitutes acceptance of modified terms.',
+                sec11Title: '11. Contact Information',
+                sec11Text: 'For questions about these terms:',
+                lastUpdated: 'Last updated: January 2025'
             },
             privacy: {
                 title: 'Privacy Policy',
-                subtitle: 'Your Privacy Matters to Us'
+                subtitle: 'Your Privacy Matters to Us',
+                sec1Title: '1. Information We Collect',
+                sec1Intro:
+                    'Ocean Line LLC collects personal information from seafarers, ship owners, and other clients to provide maritime crewing services. This may include:',
+                sec1L1: 'Personal identification information (name, date of birth, passport details)',
+                sec1L2: 'Maritime certificates and qualifications (STCW, medical certificates)',
+                sec1L3: 'Employment history and references',
+                sec1L4: 'Contact information (email, phone, address)',
+                sec1L5: 'Visa and travel documentation',
+                sec1L6: 'Banking information for salary payments',
+                sec2Title: '2. How We Use Your Information',
+                sec2Intro: 'We use collected information to:',
+                sec2L1: 'Provide crewing and recruitment services',
+                sec2L2: 'Process visa applications and travel arrangements',
+                sec2L3: 'Communicate about job opportunities and placements',
+                sec2L4: 'Maintain compliance with maritime regulations',
+                sec2L5: 'Process payments and maintain financial records',
+                sec2L6: 'Provide ongoing support and assistance',
+                sec3Title: '3. Information Sharing',
+                sec3Intro: 'We may share your information with:',
+                sec3L1: 'Ship owners and operators for crew placement',
+                sec3L2: 'Government authorities for visa and immigration purposes',
+                sec3L3: 'Maritime authorities for certification verification',
+                sec3L4: 'Medical facilities for health assessments',
+                sec3L5: 'Legal and regulatory bodies as required by law',
+                sec4Title: '4. Data Security',
+                sec4Text:
+                    'We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. All data is stored securely and accessed only by authorized personnel.',
+                sec5Title: '5. Your Rights',
+                sec5Intro: 'You have the right to:',
+                sec5L1: 'Access your personal information',
+                sec5L2: 'Request correction of inaccurate data',
+                sec5L3: 'Request deletion of your data (subject to legal requirements)',
+                sec5L4: 'Withdraw consent for data processing',
+                sec5L5: 'File complaints with relevant authorities',
+                sec6Title: '6. Contact Information',
+                sec6Text: 'For privacy-related inquiries, contact us at:',
+                lastUpdated: 'Last updated: January 2025'
             },
             gdpr: {
                 title: 'GDPR & Data Protection',
@@ -751,7 +904,88 @@ const translations = {
                     'By contacting us, submitting your application, or otherwise providing your personal data, you acknowledge that we process your personal data for the purposes described in this notice.',
                 sec2Title: '2. Data Controller',
                 sec2P1: 'The data controller responsible for the processing of your personal data is:',
-                sec2P2: 'Ocean Line LLC\nAkhmed Melashvili Str 24,\nBatumi, Georgia'
+                sec2P2: 'Ocean Line LLC\nAkhmed Melashvili Str 24,\nBatumi, Georgia',
+                sec3Title: '3. Data Protection Officer & Contact for Complaints',
+                sec3P1:
+                    'We have appointed a Data Protection Officer (DPO) who is responsible for overseeing questions and complaints in relation to this notice and our processing of personal data.',
+                sec3NameLabel: 'Name:',
+                sec3Name: 'RUSUDAN PALAVANDISHVILI',
+                sec3PosLabel: 'Position:',
+                sec3Pos: 'Data Protection Officer',
+                sec3PhoneLabel: 'Phone:',
+                sec3EmailLabel: 'Email:',
+                sec3AddrLabel: 'Address:',
+                sec3Addr: 'Akhmed Melashvili Str 24, Batumi, Georgia',
+                sec3P2:
+                    'This person is responsible for receiving and reviewing any claims, complaints, requests and inquiries related to personal data processing. You may contact the DPO at any time using the details above.',
+                sec4Title: '4. Categories of Personal Data We Process',
+                sec4P1:
+                    'We process personal data necessary to provide maritime crewing, recruitment and related services, including:',
+                sec4L1: 'Identification data (name, date of birth, nationality, passport and ID details);',
+                sec4L2: 'Contact details (address, phone number, email);',
+                sec4L3: 'Professional and employment data (CV, rank, maritime experience, references);',
+                sec4L4: 'Qualification and certification data (e.g. STCW, medical certificates, training records);',
+                sec4L5: 'Financial data (bank details for salary payments where applicable);',
+                sec4L6: 'Visa and travel data (visas, tickets, travel history related to employment);',
+                sec4L7: 'Any other information you choose to share with us in the recruitment / crewing process.',
+                sec5Title: '5. Purposes and Legal Bases for Processing',
+                sec5P1:
+                    'We process your personal data for the following purposes and on the following legal bases under GDPR:',
+                sec5L1:
+                    'Recruitment and placement of seafarers on vessels – processing is necessary for the performance of a contract or to take steps at your request prior to entering into a contract (GDPR Art. 6(1)(b)).',
+                sec5L2:
+                    'Crew management and HR administration – performance of a contract and our legitimate interests to manage our operations (GDPR Art. 6(1)(b), 6(1)(f)).',
+                sec5L3:
+                    'Compliance with legal and regulatory obligations (e.g. maritime, immigration, tax, employment laws) – compliance with a legal obligation (GDPR Art. 6(1)(c)).',
+                sec5L4:
+                    'Communication with you about job opportunities, assignments, and support – performance of a contract and legitimate interests (GDPR Art. 6(1)(b), 6(1)(f)).',
+                sec5L5:
+                    'Record keeping, safety and security – legitimate interests in ensuring effective management, safety and security (GDPR Art. 6(1)(f)).',
+                sec5L6:
+                    'Processing based on your consent (where required, e.g. for certain marketing communications) – consent (GDPR Art. 6(1)(a)), which you may withdraw at any time.',
+                sec6Title: '6. Data Processing Warning',
+                sec6P1:
+                    'Important: Ocean Line LLC does process personal data of seafarers, ship owners, partners and other individuals in the course of providing crewing and recruitment services. All such processing is carried out in accordance with GDPR and applicable Georgian law, based on the purposes and legal grounds described in this notice.',
+                sec7Title: '7. Data Sharing and International Transfers',
+                sec7P1: 'We may share your personal data with:',
+                sec7L1: 'Ship owners, operators and managers for the purpose of crew recruitment and placement;',
+                sec7L2: 'Maritime authorities, flag state administrations and port state control, where required;',
+                sec7L3: 'Immigration and other governmental authorities in connection with visas and travel;',
+                sec7L4: 'Medical facilities and insurance providers for medical examinations and coverage;',
+                sec7L5: 'Professional advisers (lawyers, auditors, consultants) where necessary;',
+                sec7L6: 'IT and system providers who support our business operations.',
+                sec7P2:
+                    'Where personal data is transferred outside the European Economic Area (EEA), we will ensure that appropriate safeguards are in place (such as Standard Contractual Clauses or equivalent measures) in accordance with GDPR requirements.',
+                sec8Title: '8. Data Retention',
+                sec8P1:
+                    'We keep your personal data only for as long as necessary to fulfil the purposes for which it was collected, including satisfying any legal, regulatory, accounting or reporting requirements. As a general rule:',
+                sec8L1:
+                    'Recruitment and crewing records are retained for the duration of your cooperation with us and for a reasonable period thereafter;',
+                sec8L2:
+                    'Documents required by law (e.g. accounting, tax, employment) are retained for the periods specified in applicable legislation;',
+                sec8L3: 'Where processing is based on consent, data may be deleted earlier if you withdraw your consent.',
+                sec9Title: '9. Your Rights as a Data Subject',
+                sec9P1: 'Subject to the conditions and applicable limitations under GDPR, you have the right to:',
+                sec9L1: 'Request access to your personal data and obtain a copy;',
+                sec9L2: 'Request rectification of inaccurate or incomplete data;',
+                sec9L3: 'Request erasure of your data (“right to be forgotten”) where applicable;',
+                sec9L4: 'Request restriction of processing in certain circumstances;',
+                sec9L5: 'Object to processing based on our legitimate interests;',
+                sec9L6:
+                    'Receive your data in a structured, commonly used and machine-readable format and have it transmitted to another controller where technically feasible (data portability);',
+                sec9L7:
+                    'Withdraw consent at any time, where processing is based on consent, without affecting the lawfulness of processing prior to withdrawal;',
+                sec9L8: 'Lodge a complaint with a competent data protection authority.',
+                sec9P2:
+                    'To exercise any of your rights, please contact our Data Protection Officer using the details provided above.',
+                sec10Title: '10. Complaints',
+                sec10P1:
+                    'If you believe that your data protection rights have been violated, you may first contact our Data Protection Officer who is responsible for receiving and reviewing all complaints related to personal data processing. You also have the right to lodge a complaint with your local supervisory authority or any other competent data protection authority.',
+                sec10DPO: 'Data Protection Officer',
+                sec11Title: '11. Changes to This Notice',
+                sec11P1:
+                    'We may update this GDPR & Data Protection Notice from time to time to reflect changes in our practices, legal requirements or other operational reasons. The updated version will always be available on this page.',
+                lastUpdated: 'Last updated: January 2025'
             }
         }
     },
@@ -767,7 +1001,7 @@ const translations = {
         },
         hero: {
             title: 'OCEAN LINE LLC',
-            subtitle: 'საქართველოს წამყვანი საქრუინგო სააგენტო | პროფესიული საზღვაო რეკრუტინგი',
+            subtitle: 'საქართველოს წამყვანი საკრუინგო სააგენტო | პროფესიული საზღვაო რეკრუტინგი',
             value: {
                 stability: 'სტაბილურობა',
                 responsibility: 'პასუხისმგებლობა',
@@ -1015,26 +1249,31 @@ const translations = {
                 processTitle: 'ჩვენი შერჩევის პროცესი',
                 features: {
                     f1: {
+                        title: 'მკაცრი შერჩევა',
+                        text:
+                            'თითოეული განმცხადებელი გადის საფუძვლიან შემოწმებას, დოკუმენტების ვერიფიკაციას და კომპეტენციის შეფასებას საერთაშორისო საზღვაო სტანდარტებთან შესაბამისობის უზრუნველსაყოფად.'
+                    },
+                    f2: {
                         title: 'კვალიფიკაციის ვერიფიკაცია',
                         text:
                             'ჩვენ ვამოწმებთ ყველა სერტიფიკატს, ლიცენზიასა და უფლებამოსილებას STCW კონვენციისა და IMO რეგულაციების შესაბამისად.'
                     },
-                    f2: {
+                    f3: {
                         title: 'ფიზიკური მდგომარეობის შეფასება',
                         text:
                             'ეკიპაჟის ყველა წევრი გადის სამედიცინო შემოწმებას, რათა დავრწმუნდეთ მათ ფიზიკურ და ფსიქიკურ მზადყოფნაში საზღვაო სამსახურისთვის.'
                     },
-                    f3: {
+                    f4: {
                         title: 'ინგლისური ენის ცოდნა',
                         text:
                             'ჩვენ ვაფასებთ ინგლისური ენის ცოდნას, რათა უზრუნველვყოთ ეფექტური კომუნიკაცია საერთაშორისო გემებზე უსაფრთხოების მიზნით.'
                     },
-                    f4: {
+                    f5: {
                         title: 'გამოცდილების შემოწმება',
                         text:
                             'ჩვენ განვიხილავთ ნაოსნობისა და წინა სამუშაო გამოცდილებას, რათა შევარჩიოთ თქვენი გემის მოთხოვნებთან შესაბამისი პერსონალი.'
                     },
-                    f5: {
+                    f6: {
                         title: 'გამგზავრებისწინა მომზადება',
                         text:
                             'შერჩეული ეკიპაჟის წევრები გადიან დეტალურ ინსტრუქტაჟს გემის სპეციფიკაციების, კომპანიის პოლიტიკისა და მოთხოვნების შესახებ.'
@@ -1198,20 +1437,169 @@ const translations = {
             page: {
                 title: 'გალერეა',
                 subtitle: 'ჩვენი ფლოტი მოქმედებაში'
+            },
+            intro: {
+                title: 'საზღვაო ოპერაციები მოქმედებაში',
+                text: 'ნახეთ ჩვენი პროფესიონალური ეკიპაჟისა და გემის ოპერაციები. გაეცანით იმ თავდადებასა და გამოცდილებას, რომელიც განსაზღვრავს Ocean Line LLC-ს.'
+            },
+            videos: {
+                title: 'საზღვაო ვიდეოები',
+                v1: {
+                    title: 'საზღვაო ოპერაციები',
+                    text: 'პროფესიონალური ეკიპაჟის ოპერაციები და გემის მართვა'
+                },
+                v2: {
+                    title: 'Ocean Line-ის ოპერაციები',
+                    text: 'ჩვენი საზღვაო სერვისების კულისებს მიღმა'
+                }
             }
         },
         legal: {
             disclaimer: {
-                title: 'უარყოფა',
-                subtitle: 'მნიშვნელოვანი ინფორმაცია ჩვენს სერვისებზე'
+                title: 'პასუხისმგებლობის შეზღუდვა',
+                subtitle: 'მნიშვნელოვანი ინფორმაცია ჩვენი სერვისების შესახებ',
+                secTitle: 'საზღვაო ეკიპაჟის მომსახურების პასუხისმგებლობის შეზღუდვა',
+                secIntro:
+                    'Ocean Line LLC საზღვაო ეკიპაჟის დაკომპლექტების მომსახურებას ეწევა, როგორც რეკრუიტირების სააგენტო. გთხოვთ, ყურადღებით წაიკითხოთ პასუხისმგებლობის შეზღუდვის პირობები ჩვენი სერვისებით სარგებლობამდე.',
+                sec1Title: '1. მომსახურების სფერო',
+                sec1Text:
+                    'Ocean Line LLC მოქმედებს როგორც შუამავალი გემთმფლობელებს/ოპერატორებსა და კვალიფიციურ მეზღვაურებს შორის. ჩვენ ხელს ვუწყობთ საზღვაო პერსონალის შერჩევას, განთავსებასა და მართვას, მაგრამ უშუალოდ არ ვასაქმებთ მეზღვაურებს და არ ვმართავთ გემებს.',
+                sec2Title: '2. სერტიფიცირება და შესაბამისობა',
+                sec2Text:
+                    'მიუხედავად იმისა, რომ ჩვენ უზრუნველვყოფთ ყველა რეკომენდებული ეკიპაჟის წევრის STCW სერტიფიკატების ვალიდურობასა და ინდუსტრიის სტანდარტებთან შესაბამისობას, გემის შესაბამისობაზე, უსაფრთხოებასა და ოპერაციებზე საბოლოო პასუხისმგებლობა ეკისრება გემთმფლობელს/ოპერატორს და გემის კაპიტანს.',
+                sec3Title: '3. პასუხისმგებლობის შეზღუდვა',
+                sec3Text:
+                    'Ocean Line LLC-ის პასუხისმგებლობა შემოიფარგლება მხოლოდ ჩვენი რეკრუიტირების მომსახურებით. ჩვენ არ ვართ პასუხისმგებელნი:',
+                sec3L1: 'გემზე განთავსებული ეკიპაჟის წევრების ქმედებებსა თუ ქცევაზე',
+                sec3L2: 'გემის ოპერაციებზე, უსაფრთხოებაზე ან მუშაობაზე',
+                sec3L3: 'საერთაშორისო საზღვაო რეგულაციების ცვლილებებზე',
+                sec3L4: 'სავიზო პროცესის ან მგზავრობის დაგვიანებაზე',
+                sec3L5: 'სამედიცინო მდგომარეობაზე, რომელიც განვითარდება დასაქმების შემდეგ',
+                sec3L6: 'პოლიტიკურ ან ეკონომიკურ ფაქტორებზე, რომლებიც გავლენას ახდენს ნაოსნობაზე',
+                sec4Title: '4. ვიზა და მგზავრობა',
+                sec4Text:
+                    'ჩვენ ვეხმარებით მეზღვაურებს სავიზო განაცხადებისა და მგზავრობის ორგანიზებაში, თუმცა ვერ გავცემთ ვიზის მიღების გარანტიას. სავიზო გადაწყვეტილებებს იღებენ შესაბამისი სამთავრობო ორგანოები. მგზავრობის შეზღუდვები და მოთხოვნები შეიძლება შეიცვალოს გაფრთხილების გარეშე.',
+                sec5Title: '5. დასაქმების პირობები',
+                sec5Text:
+                    'დასაქმების პირობები, მათ შორის ხელფასი, სამუშაო გარემო და კონტრაქტის ხანგრძლივობა, თანხმდება უშუალოდ მეზღვაურსა და გემთმფლობელს/ოპერატორს შორის. Ocean Line LLC ხელს უწყობს ამ პროცესს, მაგრამ ვერ იძლევა კონკრეტული დასაქმების პირობების გარანტიას.',
+                sec6Title: '6. მარეგულირებელი შესაბამისობა',
+                sec6Text:
+                    'საზღვაო რეგულაციები განსხვავდება იურისდიქციისა და გემის ტიპის მიხედვით. მიუხედავად იმისა, რომ ჩვენ თვალყურს ვადევნებთ ძირითად საერთაშორისო სტანდარტებს, კლიენტებმა უნდა უზრუნველყონ ყველა მოქმედი კანონის დაცვა მათი საქმიანობის სფეროში.',
+                sec7Title: '7. ინფორმაციის სიზუსტე',
+                sec7Text:
+                    'ჩვენ ვცდილობთ მოგაწოდოთ ზუსტი ინფორმაცია ეკიპაჟის კვალიფიკაციისა და ხელმისაწვდომობის შესახებ. თუმცა, ინფორმაცია შეიძლება შეიცვალოს და ჩვენ გირჩევთ ყველა დეტალის გადამოწმებას საბოლოო გადაწყვეტილების მიღებამდე.',
+                sec8Title: '8. ფორსმაჟორი',
+                sec8Text:
+                    'Ocean Line LLC არ არის პასუხისმგებელი დაგვიანებაზე ან შეუსრულებლობაზე, რომელიც გამოწვეულია ჩვენი კონტროლის მიღმა არსებული გარემოებებით, მათ შორის, ბუნებრივი კატასტროფებით, პანდემიებით, პოლიტიკური არეულობით ან სამთავრობო ქმედებებით.',
+                sec9Title: '9. პროფესიული რჩევა',
+                sec9Text:
+                    'ეს ვებ-გვერდი და ჩვენი სერვისები მოგაწვდით ზოგად ინფორმაციას. საზღვაო ოპერაციებთან დაკავშირებული კონკრეტული იურიდიული, ფინანსური ან ტექნიკური რჩევისთვის, მიმართეთ შესაბამისი სფეროს კვალიფიციურ პროფესიონალებს.',
+                sec10Title: '10. საკონტაქტო ინფორმაცია',
+                sec10Text: 'ამ პასუხისმგებლობის შეზღუდვასთან ან ჩვენს სერვისებთან დაკავშირებული კითხვებისთვის:',
+                lastUpdated: 'ბოლო განახლება: იანვარი 2025'
             },
             terms: {
-                title: 'გამოყენების პირობები',
-                subtitle: 'წესები და პირობები'
+                title: 'მომსახურების პირობები',
+                subtitle: 'წესები და პირობები',
+                secTitle: 'საზღვაო ეკიპაჟის მომსახურების წესები და პირობები',
+                secIntro:
+                    'ეს წესები და პირობები არეგულირებს Ocean Line LLC-ის საზღვაო ეკიპაჟის მომსახურებით სარგებლობას. ჩვენი სერვისების გამოყენებით თქვენ ეთანხმებით ამ პირობებს.',
+                sec1Title: '1. მომსახურების ხელშეკრულება',
+                sec1Text:
+                    'Ocean Line LLC ეწევა საზღვაო ეკიპაჟის მომსახურებას, რაც მოიცავს, მაგრამ არ შემოიფარგლება ეკიპაჟის რეკრუიტირებით, განთავსებით, მართვითა და სავიზო მხარდაჭერით. მომსახურება ხორციელდება ამ პირობებისა და კლიენტებთან დადებული კონკრეტული ხელშეკრულებების საფუძველზე.',
+                sec2Title: '2. კლიენტის ვალდებულებები',
+                sec2Text: 'კლიენტები თანხმდებიან:',
+                sec2L1: 'მოგვაწოდონ ზუსტი ინფორმაცია გემის მოთხოვნებისა და საოპერაციო პირობების შესახებ',
+                sec2L2: 'დაიცვან ყველა მოქმედი საზღვაო კანონი და რეგულაცია',
+                sec2L3: 'უზრუნველყონ ეკიპაჟის წევრების სათანადო დაზღვევა',
+                sec2L4: 'უზრუნველყონ უსაფრთხო სამუშაო პირობები და ადეკვატური მომარაგება',
+                sec2L5: 'კეთილსინდისიერად შეასრულონ დასაქმების კონტრაქტები და გადახდის ვალდებულებები',
+                sec2L6: 'დაუყოვნებლივ შეგვატყობინონ ნებისმიერი პრობლემის ან მოთხოვნების ცვლილების შესახებ',
+                sec3Title: '3. მეზღვაურის ვალდებულებები',
+                sec3Text: 'მეზღვაურები თანხმდებიან:',
+                sec3L1: 'ჰქონდეთ ვალიდური სერტიფიკატები და იყვნენ სამედიცინოდ ვარგისნი',
+                sec3L2: 'შეასრულონ მოვალეობები კომპეტენტურად და პროფესიონალურად',
+                sec3L3: 'დაიცვან გემის წესები და საერთაშორისო საზღვაო სამართალი',
+                sec3L4: 'გამოცხადდნენ სამსახურში დადგენილ დროს',
+                sec3L5: 'მოგვაწოდონ ზუსტი ინფორმაცია კვალიფიკაციისა და გამოცდილების შესახებ',
+                sec3L6: 'დაიცვან უსაფრთხოების პროცედურები და საგანგებო სიტუაციების პროტოკოლები',
+                sec4Title: '4. მოსაკრებლები და გადახდები',
+                sec4Text: 'მომსახურების საფასური განისაზღვრება ინდივიდუალური კონტრაქტებით. გადახდის პირობები ჩვეულებრივ მოიცავს:',
+                sec4L1: 'რეკრუიტირების საფასური, რომელიც გადაიხდება წარმატებული განთავსების შემდეგ',
+                sec4L2: 'მართვის საფასური ეკიპაჟის მიმდინარე მხარდაჭერისთვის',
+                sec4L3: 'დამატებითი ხარჯები სავიზო დამუშავებისა და მგზავრობის ორგანიზებისთვის',
+                sec4L4: 'დაგვიანებული გადახდის საფასური შეიძლება დაწესდეს ვადაგადაცილებულ ანგარიშებზე',
+                sec5Title: '5. გაუქმება და ანაზღაურება',
+                sec5Text: 'გაუქმების პოლიტიკა განსხვავდება მომსახურების ტიპის მიხედვით. ზოგადად:',
+                sec5L1: 'რეკრუიტირების საფასური არ ბრუნდება განთავსების დადასტურების შემდეგ',
+                sec5L2: 'სავიზო მოსაკრებელი შეიძლება ნაწილობრივ დაბრუნდეს, თუ დამუშავება ჯერ არ დაწყებულა',
+                sec5L3: 'მართვის საფასური იანგარიშება მომსახურების გაწევის ხანგრძლივობის მიხედვით',
+                sec6Title: '6. კონფიდენციალურობა',
+                sec6Text:
+                    'ორივე მხარე თანხმდება დაიცვას სენსიტიური ინფორმაციის კონფიდენციალურობა, რაც მოიცავს გემის დეტალებს, ეკიპაჟის პერსონალურ მონაცემებსა და ბიზნეს ოპერაციებს.',
+                sec7Title: '7. შესაბამისობა და რეგულაციები',
+                sec7Text: 'ყველა მხარემ უნდა დაიცვას:',
+                sec7L1: 'საერთაშორისო საზღვაო ორგანიზაციის (IMO) რეგულაციები',
+                sec7L2: 'საზღვაო შრომის კონვენცია (MLC) 2006',
+                sec7L3: 'STCW კონვენციის მოთხოვნები',
+                sec7L4: 'ადგილობრივი და საერთაშორისო საიმიგრაციო კანონები',
+                sec7L5: 'ანტიდისკრიმინაციული და თანაბარი შესაძლებლობების კანონები',
+                sec8Title: '8. დავების გადაწყვეტა',
+                sec8Text: 'დავები გადაწყდება:',
+                sec8L1: 'მხარეებს შორის პირდაპირი მოლაპარაკებების გზით',
+                sec8L2: 'მედიაციით, თუ მოლაპარაკება ვერ შედგება',
+                sec8L3: 'არბიტრაჟით საქართველოს კანონმდებლობის შესაბამისად, თუ მედიაცია ვერ გადაწყვეტს დავას',
+                sec8L4: 'სამართლებრივი ქმედებით, როგორც უკანასკნელი საშუალებით',
+                sec9Title: '9. ფორსმაჟორი',
+                sec9Text:
+                    'არცერთი მხარე არ არის პასუხისმგებელი დაგვიანებაზე ან შეუსრულებლობაზე, რომელიც გამოწვეულია ჩვენი კონტროლის მიღმა არსებული გარემოებებით, მათ შორის, ბუნებრივი კატასტროფებით, პანდემიებით, სამთავრობო ქმედებებით ან შრომითი დავებით.',
+                sec10Title: '10. ცვლილებები',
+                sec10Text:
+                    'ეს პირობები შეიძლება შეიცვალოს ნებისმიერ დროს. მომსახურების გაგრძელება ნიშნავს შეცვლილი პირობების მიღებას.',
+                sec11Title: '11. საკონტაქტო ინფორმაცია',
+                sec11Text: 'ამ პირობებთან დაკავშირებული კითხვებისთვის:',
+                lastUpdated: 'ბოლო განახლება: იანვარი 2025'
             },
             privacy: {
                 title: 'კონფიდენციალურობის პოლიტიკა',
-                subtitle: 'თქვენი პერსონალური მონაცემების დაცვა'
+                subtitle: 'თქვენი კონფიდენციალურობა ჩვენთვის მნიშვნელოვანია',
+                sec1Title: '1. ინფორმაცია, რომელსაც ვაგროვებთ',
+                sec1Intro:
+                    'Ocean Line LLC აგროვებს პერსონალურ ინფორმაციას მეზღვაურებისგან, გემთმფლობელებისგან და სხვა კლიენტებისგან საზღვაო ეკიპაჟის მომსახურების მისაწოდებლად. ეს შეიძლება მოიცავდეს:',
+                sec1L1: 'პერსონალური საიდენტიფიკაციო ინფორმაცია (სახელი, დაბადების თარიღი, პასპორტის მონაცემები)',
+                sec1L2: 'საზღვაო სერტიფიკატები და კვალიფიკაცია (STCW, სამედიცინო სერტიფიკატები)',
+                sec1L3: 'სამუშაო გამოცდილება და რეკომენდაციები',
+                sec1L4: 'საკონტაქტო ინფორმაცია (ელ-ფოსტა, ტელეფონი, მისამართი)',
+                sec1L5: 'სავიზო და სამგზავრო დოკუმენტაცია',
+                sec1L6: 'საბანკო ინფორმაცია ხელფასის გადახდისთვის',
+                sec2Title: '2. როგორ ვიყენებთ თქვენს ინფორმაციას',
+                sec2Intro: 'ჩვენ ვიყენებთ შეგროვებულ ინფორმაციას:',
+                sec2L1: 'ეკიპაჟის დაკომპლექტებისა და რეკრუიტირების მომსახურების მისაწოდებლად',
+                sec2L2: 'სავიზო განაცხადებისა და მგზავრობის ორგანიზებისთვის',
+                sec2L3: 'სამუშაო შესაძლებლობებისა და ვაკანსიების შესახებ კომუნიკაციისთვის',
+                sec2L4: 'საზღვაო რეგულაციებთან შესაბამისობის შესანარჩუნებლად',
+                sec2L5: 'გადახდების დასამუშავებლად და ფინანსური ჩანაწერების საწარმოებლად',
+                sec2L6: 'მიმდინარე მხარდაჭერისა და დახმარების მისაწოდებლად',
+                sec3Title: '3. ინფორმაციის გაზიარება',
+                sec3Intro: 'ჩვენ შეიძლება გავუზიაროთ თქვენი ინფორმაცია:',
+                sec3L1: 'გემთმფლობელებსა და ოპერატორებს ეკიპაჟის განთავსებისთვის',
+                sec3L2: 'სამთავრობო ორგანოებს სავიზო და საიმიგრაციო მიზნებისთვის',
+                sec3L3: 'საზღვაო ორგანოებს სერტიფიკატების ვერიფიკაციისთვის',
+                sec3L4: 'სამედიცინო დაწესებულებებს ჯანმრთელობის შეფასებისთვის',
+                sec3L5: 'იურიდიულ და მარეგულირებელ ორგანოებს კანონით მოთხოვნილ შემთხვევებში',
+                sec4Title: '4. მონაცემთა უსაფრთხოება',
+                sec4Text:
+                    'ჩვენ ვახორციელებთ უსაფრთხოების შესაბამის ზომებს თქვენი პერსონალური ინფორმაციის უნებართვო წვდომისგან, შეცვლისგან, გამჟღავნებისგან ან განადგურებისგან დასაცავად. ყველა მონაცემი ინახება უსაფრთხოდ და მასზე წვდომა აქვთ მხოლოდ უფლებამოსილ პერსონალს.',
+                sec5Title: '5. თქვენი უფლებები',
+                sec5Intro: 'თქვენ გაქვთ უფლება:',
+                sec5L1: 'მიიღოთ წვდომა თქვენს პერსონალურ ინფორმაციაზე',
+                sec5L2: 'მოითხოვოთ არაზუსტი მონაცემების გასწორება',
+                sec5L3: 'მოითხოვოთ თქვენი მონაცემების წაშლა (სამართლებრივი მოთხოვნების გათვალისწინებით)',
+                sec5L4: 'გამოითხოვოთ თანხმობა მონაცემთა დამუშავებაზე',
+                sec5L5: 'წარადგინოთ საჩივარი შესაბამის ორგანოებში',
+                sec6Title: '6. საკონტაქტო ინფორმაცია',
+                sec6Text: 'კონფიდენციალურობასთან დაკავშირებული კითხვებისთვის დაგვიკავშირდით:',
+                lastUpdated: 'ბოლო განახლება: იანვარი 2025'
             },
             gdpr: {
                 title: 'GDPR და პერსონალური მონაცემები',
@@ -1223,8 +1611,90 @@ const translations = {
                     'ჩვენთან დაკავშირებით, განაცხადის გამოგზავნით ან სხვა ფორმით თქვენი პერსონალური მონაცემების გადმოცემით ადასტურებთ, რომ ჩვენ ვამუშავებთ მონაცემებს ამ განცხადებაში აღწერილი მიზნებისთვის.',
                 sec2Title: '2. მონაცემთა დამმუშავებელი',
                 sec2P1: 'თქვენი პერსონალური მონაცემების დამმუშავებელი სუბიექტია:',
-                sec2P2: 'Ocean Line LLC\nAkhmed Melashvili Str 24,\nBatumi, Georgia'
+                sec2P2: 'Ocean Line LLC\nAkhmed Melashvili Str 24,\nBatumi, Georgia',
+                sec3Title: '3. პერსონალურ მონაცემთა დაცვის ოფიცერი და საკონტაქტო პირი საჩივრებისთვის',
+                sec3P1:
+                    'ჩვენ დავნიშნეთ პერსონალურ მონაცემთა დაცვის ოფიცერი (DPO), რომელიც პასუხისმგებელია ამ შეტყობინებასთან და ჩვენს მიერ პერსონალური მონაცემების დამუშავებასთან დაკავშირებული კითხვებისა და საჩივრების ზედამხედველობაზე.',
+                sec3NameLabel: 'სახელი:',
+                sec3Name: 'რუსუდან ფალავანდიშვილი',
+                sec3PosLabel: 'პოზიცია:',
+                sec3Pos: 'პერსონალურ მონაცემთა დაცვის ოფიცერი',
+                sec3PhoneLabel: 'ტელეფონი:',
+                sec3EmailLabel: 'ელ-ფოსტა:',
+                sec3AddrLabel: 'მისამართი:',
+                sec3Addr: 'ახმედ მელაშვილის ქ. 24, ბათუმი, საქართველო',
+                sec3P2:
+                    'ეს პირი პასუხისმგებელია პერსონალური მონაცემების დამუშავებასთან დაკავშირებული ნებისმიერი პრეტენზიის, საჩივრის, მოთხოვნისა და მოკვლევის მიღებასა და განხილვაზე. თქვენ შეგიძლიათ დაუკავშირდეთ DPO-ს ნებისმიერ დროს ზემოთ მოცემული დეტალების გამოყენებით.',
+                sec4Title: '4. პერსონალური მონაცემების კატეგორიები, რომლებსაც ვამუშავებთ',
+                sec4P1:
+                    'ჩვენ ვამუშავებთ პერსონალურ მონაცემებს, რომლებიც აუცილებელია საზღვაო ეკიპაჟის დაკომპლექტების, რეკრუიტირებისა და მასთან დაკავშირებული სერვისების მისაწოდებლად, მათ შორის:',
+                sec4L1: 'საიდენტიფიკაციო მონაცემები (სახელი, დაბადების თარიღი, მოქალაქეობა, პასპორტისა და პირადობის მოწმობის მონაცემები);',
+                sec4L2: 'საკონტაქტო ინფორმაცია (მისამართი, ტელეფონის ნომერი, ელ-ფოსტა);',
+                sec4L3: 'პროფესიული და დასაქმების მონაცემები (CV, რანგი, საზღვაო გამოცდილება, რეკომენდაციები);',
+                sec4L4: 'კვალიფიკაციისა და სერტიფიცირების მონაცემები (მაგ. STCW, სამედიცინო სერტიფიკატები, ტრენინგების ჩანაწერები);',
+                sec4L5: 'ფინანსური მონაცემები (საბანკო რეკვიზიტები ხელფასის გადახდისთვის, სადაც ეს რელევანტურია);',
+                sec4L6: 'სავიზო და სამგზავრო მონაცემები (ვიზები, ბილეთები, დასაქმებასთან დაკავშირებული მოგზაურობის ისტორია);',
+                sec4L7: 'ნებისმიერი სხვა ინფორმაცია, რომლის გაზიარებასაც თავად გადაწყვეტთ რეკრუიტირების / დაკომპლექტების პროცესში.',
+                sec5Title: '5. დამუშავების მიზნები და სამართლებრივი საფუძვლები',
+                sec5P1:
+                    'ჩვენ ვამუშავებთ თქვენს პერსონალურ მონაცემებს შემდეგი მიზნებისთვის და შემდეგი სამართლებრივი საფუძვლებით GDPR-ის შესაბამისად:',
+                sec5L1:
+                    'მეზღვაურების რეკრუიტირება და განთავსება გემებზე – დამუშავება აუცილებელია ხელშეკრულების შესასრულებლად ან თქვენი მოთხოვნით ნაბიჯების გადასადგმელად ხელშეკრულების დადებამდე (GDPR მუხლი 6(1)(b)).',
+                sec5L2:
+                    'ეკიპაჟის მართვა და HR ადმინისტრირება – ხელშეკრულების შესრულება და ჩვენი ლეგიტიმური ინტერესები ჩვენი საქმიანობის სამართავად (GDPR მუხლი 6(1)(b), 6(1)(f)).',
+                sec5L3:
+                    'სამართლებრივი და მარეგულირებელი ვალდებულებების შესრულება (მაგ. საზღვაო, საიმიგრაციო, საგადასახადო, შრომითი კანონმდებლობა) – სამართლებრივი ვალდებულების შესრულება (GDPR მუხლი 6(1)(c)).',
+                sec5L4:
+                    'თქვენთან კომუნიკაცია სამუშაო შესაძლებლობების, დავალებებისა და მხარდაჭერის შესახებ – ხელშეკრულების შესრულება და ლეგიტიმური ინტერესები (GDPR მუხლი 6(1)(b), 6(1)(f)).',
+                sec5L5:
+                    'ჩანაწერების წარმოება, უსაფრთხოება და დაცვა – ლეგიტიმური ინტერესები ეფექტური მართვის, უსაფრთხოებისა და დაცვის უზრუნველსაყოფად (GDPR მუხლი 6(1)(f)).',
+                sec5L6:
+                    'დამუშავება თქვენი თანხმობის საფუძველზე (სადაც ეს საჭიროა, მაგ. გარკვეული მარკეტინგული კომუნიკაციებისთვის) – თანხმობა (GDPR მუხლი 6(1)(a)), რომელიც შეგიძლიათ ნებისმიერ დროს გამოითხოვოთ.',
+                sec6Title: '6. გაფრთხილება მონაცემთა დამუშავების შესახებ',
+                sec6P1:
+                    'მნიშვნელოვანია: Ocean Line LLC ახორციელებს მეზღვაურების, გემთმფლობელების, პარტნიორებისა და სხვა პირების პერსონალური მონაცემების დამუშავებას ეკიპაჟის დაკომპლექტებისა და რეკრუიტირების მომსახურების გაწევის პროცესში. ნებისმიერი ასეთი დამუშავება ხორციელდება GDPR-ისა და საქართველოს მოქმედი კანონმდებლობის შესაბამისად, ამ შეტყობინებაში აღწერილი მიზნებისა და სამართლებრივი საფუძვლების გათვალისწინებით.',
+                sec7Title: '7. მონაცემთა გაზიარება და საერთაშორისო გადაცემა',
+                sec7P1: 'ჩვენ შეიძლება გავუზიაროთ თქვენი პერსონალური მონაცემები:',
+                sec7L1: 'გემთმფლობელებს, ოპერატორებსა და მენეჯერებს ეკიპაჟის რეკრუიტირებისა და განთავსების მიზნით;',
+                sec7L2: 'საზღვაო ორგანოებს, დროშის სახელმწიფო ადმინისტრაციებსა და პორტის სახელმწიფო კონტროლს, სადაც ეს საჭიროა;',
+                sec7L3: 'საიმიგრაციო და სხვა სამთავრობო ორგანოებს ვიზებთან და მგზავრობასთან დაკავშირებით;',
+                sec7L4: 'სამედიცინო დაწესებულებებსა და სადაზღვევო პროვაიდერებს სამედიცინო შემოწმებისა და დაზღვევის მიზნით;',
+                sec7L5: 'პროფესიონალ მრჩევლებს (იურისტები, აუდიტორები, კონსულტანტები), სადაც ეს აუცილებელია;',
+                sec7L6: 'IT და სისტემურ პროვაიდერებს, რომლებიც მხარს უჭერენ ჩვენს ბიზნეს ოპერაციებს.',
+                sec7P2:
+                    'როდესაც პერსონალური მონაცემები გადაიცემა ევროპის ეკონომიკური ზონის (EEA) გარეთ, ჩვენ უზრუნველვყოფთ შესაბამისი დაცვის მექანიზმების არსებობას (როგორიცაა სტანდარტული სახელშეკრულებო პირობები ან ეკვივალენტური ზომები) GDPR-ის მოთხოვნების შესაბამისად.',
+                sec8Title: '8. მონაცემთა შენახვის ვადა',
+                sec8P1:
+                    'ჩვენ ვინახავთ თქვენს პერსონალურ მონაცემებს მხოლოდ იმ ვადით, რაც აუცილებელია იმ მიზნების მისაღწევად, რისთვისაც ისინი იქნა შეგროვებული, მათ შორის ნებისმიერი სამართლებრივი, მარეგულირებელი, საბუღალტრო ან საანგარიშგებო მოთხოვნების დასაკმაყოფილებლად. როგორც წესი:',
+                sec8L1:
+                    'რეკრუიტირებისა და დაკომპლექტების ჩანაწერები ინახება ჩვენთან თქვენი თანამშრომლობის განმავლობაში და გონივრული ვადით მას შემდეგ;',
+                sec8L2:
+                    'კანონით მოთხოვნილი დოკუმენტები (მაგ. საბუღალტრო, საგადასახადო, დასაქმების) ინახება მოქმედი კანონმდებლობით განსაზღვრული ვადით;',
+                sec8L3: 'თუ დამუშავება ეფუძნება თანხმობას, მონაცემები შეიძლება უფრო ადრე წაიშალოს, თუ თქვენ გამოითხოვთ თანხმობას.',
+                sec9Title: '9. თქვენი უფლებები, როგორც მონაცემთა სუბიექტის',
+                sec9P1: 'GDPR-ით გათვალისწინებული პირობებისა და მოქმედი შეზღუდვების გათვალისწინებით, თქვენ გაქვთ უფლება:',
+                sec9L1: 'მოითხოვოთ წვდომა თქვენს პერსონალურ მონაცემებზე და მიიღოთ ასლი;',
+                sec9L2: 'მოითხოვოთ არაზუსტი ან არასრული მონაცემების გასწორება;',
+                sec9L3: 'მოითხოვოთ თქვენი მონაცემების წაშლა („უფლება დავიწყებაზე“), სადაც ეს შესაძლებელია;',
+                sec9L4: 'მოითხოვოთ დამუშავების შეზღუდვა გარკვეულ გარემოებებში;',
+                sec9L5: 'წინააღმდეგობა გაუწიოთ დამუშავებას, რომელიც ეფუძნება ჩვენს ლეგიტიმურ ინტერესებს;',
+                sec9L6:
+                    'მიიღოთ თქვენი მონაცემები სტრუქტურირებული, ფართოდ გამოყენებადი და მანქანურად წაკითხვადი ფორმატით და გადასცეთ ისინი სხვა დამმუშავებელს, სადაც ეს ტექნიკურად შესაძლებელია (მონაცემთა პორტაბელურობა);',
+                sec9L7:
+                    'ნებისმიერ დროს გამოითხოვოთ თანხმობა, თუ დამუშავება ეფუძნება თანხმობას, გამოთხოვამდე განხორციელებული დამუშავების კანონიერებაზე ზეგავლენის გარეშე;',
+                sec9L8: 'წარადგინოთ საჩივარი უფლებამოსილ მონაცემთა დაცვის ორგანოში.',
+                sec9P2:
+                    'თქვენი რომელიმე უფლების გამოსაყენებლად, გთხოვთ, დაუკავშირდეთ ჩვენს პერსონალურ მონაცემთა დაცვის ოფიცერს ზემოთ მითითებული რეკვიზიტების გამოყენებით.',
+                sec10Title: '10. საჩივრები',
+                sec10P1:
+                    'თუ მიგაჩნიათ, რომ თქვენი მონაცემთა დაცვის უფლებები დაირღვა, შეგიძლიათ პირველ რიგში დაუკავშირდეთ ჩვენს პერსონალურ მონაცემთა დაცვის ოფიცერს, რომელიც პასუხისმგებელია პერსონალური მონაცემების დამუშავებასთან დაკავშირებული ყველა საჩივრის მიღებასა და განხილვაზე. თქვენ ასევე გაქვთ უფლება წარადგინოთ საჩივარი თქვენს ადგილობრივ საზედამხედველო ორგანოში ან ნებისმიერ სხვა კომპეტენტურ მონაცემთა დაცვის ორგანოში.',
+                sec10DPO: 'პერსონალურ მონაცემთა დაცვის ოფიცერი',
+                sec11Title: '11. ცვლილებები ამ შეტყობინებაში',
+                sec11P1:
+                    'ჩვენ შეიძლება დროდადრო განვაახლოთ ეს GDPR და მონაცემთა დაცვის შეტყობინება, რათა ასახოს ცვლილებები ჩვენს პრაქტიკაში, სამართლებრივ მოთხოვნებში ან სხვა ოპერაციული მიზეზების გამო. განახლებული ვერსია ყოველთვის ხელმისაწვდომი იქნება ამ გვერდზე.',
+                lastUpdated: 'ბოლო განახლება: იანვარი 2025'
             }
+        }
         }
     }
 };
