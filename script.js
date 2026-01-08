@@ -360,7 +360,15 @@ const translations = {
             },
             gdpr: {
                 title: 'GDPR & Data Protection',
-                subtitle: 'How We Protect Your Personal Data'
+                subtitle: 'How We Protect Your Personal Data',
+                sec1Title: '1. Introduction',
+                sec1P1:
+                    'This GDPR & Data Protection Notice explains how Ocean Line LLC (“we”, “us”, “our”) collects, uses, stores, and protects personal data in accordance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and applicable Georgian data protection legislation.',
+                sec1P2:
+                    'By contacting us, submitting your application, or otherwise providing your personal data, you acknowledge that we process your personal data for the purposes described in this notice.',
+                sec2Title: '2. Data Controller',
+                sec2P1: 'The data controller responsible for the processing of your personal data is:',
+                sec2P2: 'Ocean Line LLC\nAkhmed Melashvili Str 24,\nBatumi, Georgia'
             }
         }
     },
@@ -450,7 +458,15 @@ const translations = {
             },
             gdpr: {
                 title: 'GDPR და პერსონალური მონაცემები',
-                subtitle: 'როგორ ვიცავთ თქვენს პერსონალურ მონაცემებს'
+                subtitle: 'როგორ ვიცავთ თქვენს პერსონალურ მონაცემებს',
+                sec1Title: '1. შესავალი',
+                sec1P1:
+                    'ამ GDPR‑ისა და მონაცემთა დაცვის განცხადებაში განიმარტება, თუ როგორ აგროვებს, იყენებს, ინახავს და იცავს Ocean Line LLC („ჩვენ“) პერსონალურ მონაცემებს ევროკავშირის ზოგადი მონაცემთა დაცვის რეგულაციის (GDPR) და საქართველოს მოქმედი კანონმდებლობის შესაბამისად.',
+                sec1P2:
+                    'ჩვენთან დაკავშირებით, განაცხადის გამოგზავნით ან სხვა ფორმით თქვენი პერსონალური მონაცემების გადმოცემით ადასტურებთ, რომ ჩვენ ვამუშავებთ მონაცემებს ამ განცხადებაში აღწერილი მიზნებისთვის.',
+                sec2Title: '2. მონაცემთა დამმუშავებელი',
+                sec2P1: 'თქვენი პერსონალური მონაცემების დამმუშავებელი სუბიექტია:',
+                sec2P2: 'Ocean Line LLC\nAkhmed Melashvili Str 24,\nBatumi, Georgia'
             }
         }
     }
