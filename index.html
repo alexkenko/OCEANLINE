@@ -115,44 +115,48 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
                     <a href="index.html" class="logo-link">
-                        <img src="logo.png" alt="Ocean Line LLC - Leading Georgian Crewing Agency Logo" class="logo-img">
+                        <img src="logo.png" alt="Ocean Line LLC - Leading Georgian Crewing Agency Logo" class="logo-img" loading="eager" width="50" height="50">
                         <span>OCEAN LINE LLC</span>
                     </a>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
-                    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-                    <li><a href="values.html" data-i18n="nav.values">Our Values</a></li>
-                    <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
-                    <li><a href="gdpr.html" data-i18n="nav.gdpr">GDPR</a></li>
-                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-                    <li>
-                        <div class="lang-switch">
-                            <button class="lang-btn" data-lang="en">EN</button>
-                            <span>|</span>
-                            <button class="lang-btn" data-lang="ka">KA</button>
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" data-i18n="nav.home" role="menuitem">Home</a></li>
+                    <li role="none"><a href="about.html" data-i18n="nav.about" role="menuitem">About Us</a></li>
+                    <li role="none"><a href="services.html" data-i18n="nav.services" role="menuitem">Services</a></li>
+                    <li role="none"><a href="values.html" data-i18n="nav.values" role="menuitem">Our Values</a></li>
+                    <li role="none"><a href="gallery.html" data-i18n="nav.gallery" role="menuitem">Gallery</a></li>
+                    <li role="none"><a href="gdpr.html" data-i18n="nav.gdpr" role="menuitem">GDPR</a></li>
+                    <li role="none"><a href="#contact" data-i18n="nav.contact" role="menuitem">Contact</a></li>
+                    <li role="none">
+                        <div class="lang-switch" role="group" aria-label="Language selection">
+                            <button class="lang-btn" data-lang="en" aria-label="Switch to English" aria-pressed="true">EN</button>
+                            <span aria-hidden="true">|</span>
+                            <button class="lang-btn" data-lang="ka" aria-label="Switch to Georgian" aria-pressed="false">KA</button>
                         </div>
                     </li>
                 </ul>
                 <div class="header-actions">
-                    <div class="hamburger">
+                    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
+    <main id="main-content">
     <section id="home" class="hero">
         <div class="hero-background">
             <div class="wave wave1"></div>
@@ -502,6 +506,7 @@
             </div>
         </div>
     </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>

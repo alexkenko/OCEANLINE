@@ -37,6 +37,39 @@ body {
     background: var(--bg-light);
 }
 
+/* Skip to main content link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    z-index: 10000;
+    font-weight: 600;
+    border-radius: 0 0 8px 0;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* Performance optimizations */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Selection color */
 ::selection {
     background: var(--accent-color);
@@ -223,12 +256,17 @@ body {
     border: none;
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 12px 16px; /* Increased for better touch target (44px minimum) */
     border-radius: 4px;
     font-family: inherit;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: var(--transition);
     pointer-events: auto;
     z-index: 1;
@@ -250,9 +288,15 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    padding: 5px;
+    padding: 12px; /* Increased for better touch target (48px minimum) */
     z-index: 1001;
     gap: 6px;
+    background: transparent;
+    border: none;
+    min-width: 48px;
+    min-height: 48px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Always show hamburger on all screen sizes */
@@ -308,6 +352,7 @@ body {
     background: rgba(255, 255, 255, 0.03);
     border-radius: 50%;
     animation: wave 15s infinite linear;
+    will-change: transform; /* Performance optimization */
 }
 
 .wave1 {
@@ -351,6 +396,7 @@ body {
     opacity: 0.15;
     animation: float 6s ease-in-out infinite;
     color: rgba(255, 255, 255, 0.2);
+    will-change: transform; /* Performance optimization */
 }
 
 .float-icon i {
@@ -503,6 +549,11 @@ body {
     overflow: hidden;
     text-transform: uppercase;
     letter-spacing: 1px;
+    min-height: 48px; /* Better touch target */
+    min-width: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn::before {
@@ -534,6 +585,12 @@ body {
     box-shadow: 0 8px 30px rgba(212, 70, 60, 0.5);
 }
 
+.btn-primary:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+    box-shadow: 0 8px 30px rgba(212, 70, 60, 0.5), 0 0 0 3px var(--gold);
+}
+
 .btn-secondary {
     background: transparent;
     color: var(--text-light);
@@ -545,6 +602,46 @@ body {
     color: var(--primary-color);
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Focus indicators for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.nav-menu a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+.lang-btn.active,
+.lang-btn[aria-pressed="true"] {
+    color: var(--gold);
+    background: rgba(255, 215, 0, 0.1);
+    font-weight: 600;
+}
+
+.hamburger:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 .hero-buttons {
@@ -1283,8 +1380,43 @@ section {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: none;
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(10, 61, 79, 0.1);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(212, 70, 60, 0.1);
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus {
+    outline-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(212, 70, 60, 0.2);
+}
+
+.field-error {
+    display: block;
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .form-group textarea {
@@ -3087,6 +3219,33 @@ section {
     /* Mobile Footer - Restructured with boxes and separators */
     .footer {
         padding: 2rem 1rem 1rem;
+    }
+    
+    /* Improved mobile typography */
+    body {
+        font-size: 16px; /* Prevents zoom on iOS */
+        -webkit-text-size-adjust: 100%;
+    }
+    
+    /* Better mobile touch targets */
+    .nav-menu a {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .social-links a {
+        min-width: 48px;
+        min-height: 48px;
+    }
+    
+    /* Improved mobile spacing */
+    section {
+        padding: 60px 15px;
+    }
+    
+    .container {
+        padding: 0 15px;
     }
 
     .footer-content {

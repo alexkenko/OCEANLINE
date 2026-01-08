@@ -19,12 +19,15 @@ if (!overlay) {
 }
 
 hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    const isActive = navMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
     overlay.classList.toggle('active');
     
+    // Update ARIA attributes for accessibility
+    hamburger.setAttribute('aria-expanded', isActive);
+    
     // Prevent body scroll when menu is open
-    if (navMenu.classList.contains('active')) {
+    if (isActive) {
         document.body.style.overflow = 'hidden';
     } else {
         document.body.style.overflow = 'auto';
@@ -86,38 +89,135 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission with real email sending
+// Enhanced form validation with real-time feedback
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function showFieldError(input, message) {
+    const formGroup = input.closest('.form-group');
+    if (!formGroup) return;
+    
+    // Remove existing error
+    const existingError = formGroup.querySelector('.field-error');
+    if (existingError) existingError.remove();
+    
+    // Add error class
+    input.classList.add('error');
+    
+    // Create error message
+    const errorElement = document.createElement('span');
+    errorElement.className = 'field-error';
+    errorElement.textContent = message;
+    errorElement.setAttribute('role', 'alert');
+    errorElement.setAttribute('aria-live', 'polite');
+    formGroup.appendChild(errorElement);
+}
+
+function clearFieldError(input) {
+    const formGroup = input.closest('.form-group');
+    if (!formGroup) return;
+    
+    input.classList.remove('error');
+    const errorElement = formGroup.querySelector('.field-error');
+    if (errorElement) errorElement.remove();
+}
+
+function validateField(input) {
+    const value = input.value.trim();
+    const type = input.type;
+    const name = input.name || input.getAttribute('name') || '';
+    
+    clearFieldError(input);
+    
+    if (!value) {
+        showFieldError(input, 'This field is required');
+        return false;
+    }
+    
+    if (type === 'email' && !validateEmail(value)) {
+        showFieldError(input, 'Please enter a valid email address');
+        return false;
+    }
+    
+    if (name.toLowerCase().includes('name') && value.length < 2) {
+        showFieldError(input, 'Name must be at least 2 characters');
+        return false;
+    }
+    
+    if (name.toLowerCase().includes('message') && value.length < 10) {
+        showFieldError(input, 'Message must be at least 10 characters');
+        return false;
+    }
+    
+    return true;
+}
+
+// Form submission with real email sending and enhanced validation
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
+    // Real-time validation on blur
+    const formInputs = contactForm.querySelectorAll('input, textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('blur', () => {
+            validateField(input);
+        });
+        
+        input.addEventListener('input', () => {
+            if (input.classList.contains('error')) {
+                validateField(input);
+            }
+        });
+    });
+    
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         // Get form values
-        const nameInput = contactForm.querySelector('input[type="text"]');
+        const nameInput = contactForm.querySelector('input[type="text"]:not([type="email"])');
         const emailInput = contactForm.querySelector('input[type="email"]');
-        const subjectInput = contactForm.querySelectorAll('input[type="text"]')[1];
+        const subjectInput = contactForm.querySelectorAll('input[type="text"]:not([type="email"])')[1] || contactForm.querySelector('input[name*="subject"], input[placeholder*="subject" i]');
         const messageInput = contactForm.querySelector('textarea');
         const submitButton = contactForm.querySelector('button[type="submit"]');
         
-        const name = nameInput.value.trim();
-        const email = emailInput.value.trim();
-        const subject = subjectInput.value.trim();
-        const message = messageInput.value.trim();
+        // Validate all fields
+        let isValid = true;
+        if (nameInput) isValid = validateField(nameInput) && isValid;
+        if (emailInput) isValid = validateField(emailInput) && isValid;
+        if (subjectInput) isValid = validateField(subjectInput) && isValid;
+        if (messageInput) isValid = validateField(messageInput) && isValid;
         
-        // Basic validation
-        if (!name || !email || !subject || !message) {
-            showNotification('Please fill in all fields.', 'error');
+        if (!isValid) {
+            showNotification('Please correct the errors in the form.', 'error');
+            // Focus first error field
+            const firstError = contactForm.querySelector('.error');
+            if (firstError) firstError.focus();
             return;
         }
+        
+        const name = nameInput ? nameInput.value.trim() : '';
+        const email = emailInput ? emailInput.value.trim() : '';
+        const subject = subjectInput ? subjectInput.value.trim() : '';
+        const message = messageInput ? messageInput.value.trim() : '';
         
         // Disable submit button and show loading state
         const originalButtonText = submitButton.textContent;
         submitButton.disabled = true;
+        submitButton.setAttribute('aria-busy', 'true');
         submitButton.textContent = 'Sending...';
         submitButton.style.opacity = '0.7';
         
         try {
-            // Send form data to API
+            // Check if online
+            if (!navigator.onLine) {
+                throw new Error('No internet connection. Please check your connection and try again.');
+            }
+            
+            // Send form data to API with timeout
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+            
             const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
@@ -128,23 +228,43 @@ if (contactForm) {
                     email,
                     subject,
                     message
-                })
+                }),
+                signal: controller.signal
             });
+            
+            clearTimeout(timeoutId);
+            
+            if (!response.ok) {
+                const data = await response.json().catch(() => ({}));
+                throw new Error(data.error || `Server error: ${response.status}`);
+            }
             
             const data = await response.json();
             
-            if (response.ok) {
-                showNotification('Thank you for your message! We will get back to you soon.', 'success');
-                contactForm.reset();
-            } else {
-                showNotification(data.error || 'Failed to send message. Please try again or contact us directly.', 'error');
-            }
+            showNotification('Thank you for your message! We will get back to you soon.', 'success');
+            contactForm.reset();
+            // Clear all errors
+            formInputs.forEach(input => clearFieldError(input));
+            
         } catch (error) {
             console.error('Error:', error);
-            showNotification('Failed to send message. Please try again or contact us directly at crew@oceanline.space', 'error');
+            let errorMessage = 'Failed to send message. ';
+            
+            if (error.name === 'AbortError') {
+                errorMessage += 'Request timed out. Please try again.';
+            } else if (error.message.includes('internet connection')) {
+                errorMessage = error.message;
+            } else if (error.message) {
+                errorMessage += error.message;
+            } else {
+                errorMessage += 'Please try again or contact us directly at crew@oceanline.space';
+            }
+            
+            showNotification(errorMessage, 'error');
         } finally {
             // Re-enable submit button
             submitButton.disabled = false;
+            submitButton.removeAttribute('aria-busy');
             submitButton.textContent = originalButtonText;
             submitButton.style.opacity = '1';
         }
@@ -229,28 +349,47 @@ if (!document.querySelector('#notification-styles')) {
     document.head.appendChild(style);
 }
 
-// Intersection Observer for fade-in animations
+// Optimized Intersection Observer for fade-in animations with performance improvements
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
 
+// Use requestAnimationFrame for better performance
+let rafId = null;
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+    if (rafId) cancelAnimationFrame(rafId);
+    
+    rafId = requestAnimationFrame(() => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                // Unobserve after animation to improve performance
+                observer.unobserve(entry.target);
+            }
+        });
     });
 }, observerOptions);
 
-// Observe all service cards, value cards, and other elements
-document.querySelectorAll('.service-card, .value-card, .contact-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+// Observe all service cards, value cards, and other elements with lazy initialization
+const observeElements = () => {
+    const elements = document.querySelectorAll('.service-card, .value-card, .contact-item, .intro-card, .stat-item');
+    elements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        el.style.willChange = 'opacity, transform'; // Performance hint
+        observer.observe(el);
+    });
+};
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observeElements);
+} else {
+    observeElements();
+}
 
 // Add hover effect for vessel items
 document.querySelectorAll('.vessel-item').forEach(item => {
@@ -1709,6 +1848,14 @@ function setLanguage(lang) {
 
     // Update html lang attribute
     document.documentElement.lang = lang === 'ka' ? 'ka' : 'en';
+
+    // Update ARIA attributes for language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        const btnLang = btn.dataset.lang;
+        const isPressed = btnLang === lang;
+        btn.setAttribute('aria-pressed', isPressed);
+        btn.classList.toggle('active', isPressed);
+    });
 
     // Update all elements with data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
