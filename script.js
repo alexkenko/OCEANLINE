@@ -295,6 +295,73 @@ const translations = {
             cta: {
                 primary: 'Get in Touch'
             }
+        },
+        home: {
+            about: {
+                title: 'About Us'
+            },
+            services: {
+                title: 'Our Services'
+            },
+            values: {
+                title: 'Our Values',
+                intro: 'Our values are highly important to our daily work and drive what we do. Every decision and face-to-face meeting with our partners around the world should reflect our corporate values.'
+            },
+            contact: {
+                title: 'Contact Information',
+                addressTitle: 'Address',
+                phoneTitle: 'Phone',
+                emailTitle: 'Email'
+            }
+        },
+        footer: {
+            contactTitle: 'Contact Info',
+            quickLinksTitle: 'Quick Links',
+            servicesTitle: 'Services',
+            legalTitle: 'Legal',
+            copyright: '© 2025 Ocean Line LLC. All rights reserved.'
+        },
+        about: {
+            page: {
+                title: 'About Us',
+                subtitle: 'Your Trusted Maritime Partner'
+            }
+        },
+        services: {
+            page: {
+                title: 'Our Services',
+                subtitle: 'Comprehensive Maritime Crew Solutions'
+            }
+        },
+        values: {
+            page: {
+                title: 'Our Values',
+                subtitle: 'The Principles That Guide Our Every Action'
+            }
+        },
+        gallery: {
+            page: {
+                title: 'Gallery',
+                subtitle: 'Our Fleet in Action'
+            }
+        },
+        legal: {
+            disclaimer: {
+                title: 'Disclaimer',
+                subtitle: 'Important Information About Our Services'
+            },
+            terms: {
+                title: 'Terms of Service',
+                subtitle: 'Terms and Conditions'
+            },
+            privacy: {
+                title: 'Privacy Policy',
+                subtitle: 'Your Privacy Matters to Us'
+            },
+            gdpr: {
+                title: 'GDPR & Data Protection',
+                subtitle: 'How We Protect Your Personal Data'
+            }
         }
     },
     ka: {
@@ -317,6 +384,73 @@ const translations = {
             },
             cta: {
                 primary: 'დაგვიკავშირდით'
+            }
+        },
+        home: {
+            about: {
+                title: 'ჩვენს შესახებ'
+            },
+            services: {
+                title: 'ჩვენი სერვისები'
+            },
+            values: {
+                title: 'ჩვენი ფასეულობები',
+                intro: 'ჩვენი ფასეულობები ყოველდღიურ საქმიანობას განსაზღვრავს. თითოეული გადაწყვეტილება და შეხვედრა ჩვენს პარტნიორებთან ამ პრინციპებზეა დაფუძნებული.'
+            },
+            contact: {
+                title: 'საკონტაქტო ინფორმაცია',
+                addressTitle: 'მისამართი',
+                phoneTitle: 'ტელეფონი',
+                emailTitle: 'ელ. ფოსტა'
+            }
+        },
+        footer: {
+            contactTitle: 'საკონტაქტო ინფორმაცია',
+            quickLinksTitle: 'სწრაფი წვდომა',
+            servicesTitle: 'სერვისები',
+            legalTitle: 'იურიდიული',
+            copyright: '© 2025 Ocean Line LLC. ყველა უფლება დაცულია.'
+        },
+        about: {
+            page: {
+                title: 'ჩვენს შესახებ',
+                subtitle: 'თქვენი საიმედო საზღვაო პარტნიორი'
+            }
+        },
+        services: {
+            page: {
+                title: 'ჩვენი სერვისები',
+                subtitle: 'გაერთიანებული საზღვაო ეკიპაჟის გადაწყვეტილებები'
+            }
+        },
+        values: {
+            page: {
+                title: 'ჩვენი ფასეულობები',
+                subtitle: 'პრინციპები, რომლებიც ჩვენს ყველა ნაბიჯს მართავს'
+            }
+        },
+        gallery: {
+            page: {
+                title: 'გალერეა',
+                subtitle: 'ჩვენი ფლოტი მოქმედებაში'
+            }
+        },
+        legal: {
+            disclaimer: {
+                title: 'უარყოფა',
+                subtitle: 'მნიშვნელოვანი ინფორმაცია ჩვენს სერვისებზე'
+            },
+            terms: {
+                title: 'გამოყენების პირობები',
+                subtitle: 'წესები და პირობები'
+            },
+            privacy: {
+                title: 'კონფიდენციალურობის პოლიტიკა',
+                subtitle: 'თქვენი პერსონალური მონაცემების დაცვა'
+            },
+            gdpr: {
+                title: 'GDPR და პერსონალური მონაცემები',
+                subtitle: 'როგორ ვიცავთ თქვენს პერსონალურ მონაცემებს'
             }
         }
     }
