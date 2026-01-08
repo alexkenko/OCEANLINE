@@ -272,3 +272,110 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Simple i18n (EN / KA)
+const translations = {
+    en: {
+        nav: {
+            home: 'Home',
+            about: 'About Us',
+            services: 'Services',
+            values: 'Our Values',
+            gallery: 'Gallery',
+            gdpr: 'GDPR',
+            contact: 'Contact'
+        },
+        hero: {
+            title: 'OCEAN LINE LLC',
+            subtitle: 'Leading Georgian Crewing Agency | Professional Maritime Recruitment',
+            value: {
+                stability: 'STABILITY',
+                responsibility: 'RESPONSIBILITY',
+                efficiency: 'EFFICIENCY'
+            },
+            cta: {
+                primary: 'Get in Touch'
+            }
+        }
+    },
+    ka: {
+        nav: {
+            home: 'მთავარი',
+            about: 'ჩვენს შესახებ',
+            services: 'სერვისები',
+            values: 'ჩვენი ფასეულობები',
+            gallery: 'გალერეა',
+            gdpr: 'GDPR / პერსონალური მონაცემები',
+            contact: 'კონტაქტი'
+        },
+        hero: {
+            title: 'OCEAN LINE LLC',
+            subtitle: 'საქართველოს წამყვანი ქრომირების სააგენტო | პროფესიული საზღვაო რეკრუტინგი',
+            value: {
+                stability: 'სტაბილურობა',
+                responsibility: 'პასუხისმგებლობა',
+                efficiency: 'ეფექტიანობა'
+            },
+            cta: {
+                primary: 'დაგვიკავშირდით'
+            }
+        }
+    }
+};
+
+function resolveTranslation(dict, key) {
+    const parts = key.split('.');
+    return parts.reduce((obj, part) => (obj && obj[part] !== undefined ? obj[part] : undefined), dict);
+}
+
+function setLanguage(lang) {
+    const dict = translations[lang];
+    if (!dict) return;
+
+    // Update html lang attribute
+    document.documentElement.lang = lang === 'ka' ? 'ka' : 'en';
+
+    // Update all elements with data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const text = resolveTranslation(dict, key);
+        if (typeof text === 'string') {
+            el.textContent = text;
+        }
+    });
+
+    // Toggle active state on language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // Persist choice
+    try {
+        localStorage.setItem('oceanline-lang', lang);
+    } catch (e) {
+        // ignore storage errors
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Attach click handlers
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.dataset.lang;
+            setLanguage(lang);
+        });
+    });
+
+    // Initialize language from storage or default EN
+    let initialLang = 'en';
+    try {
+        const saved = localStorage.getItem('oceanline-lang');
+        if (saved && translations[saved]) {
+            initialLang = saved;
+        }
+    } catch (e) {
+        // ignore
+    }
+    setLanguage(initialLang);
+});
+
+
