@@ -2,9 +2,26 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
+// Create overlay element if it doesn't exist
+let overlay = document.querySelector('.menu-overlay');
+if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+    
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+}
+
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
+    overlay.classList.toggle('active');
     
     // Prevent body scroll when menu is open
     if (navMenu.classList.contains('active')) {
@@ -19,26 +36,9 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
         document.body.style.overflow = 'auto';
     });
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-});
-
-// Handle window resize
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
 });
 
 // Smooth scrolling for navigation links
@@ -1695,7 +1695,6 @@ const translations = {
                 lastUpdated: 'ბოლო განახლება: იანვარი 2025'
             }
         }
-        }
     }
 };
 
@@ -1754,5 +1753,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setLanguage(initialLang);
 });
+
 
 
